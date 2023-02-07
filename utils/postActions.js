@@ -49,13 +49,14 @@ export const submitdr = async (
   }
 };
 export const submitBook = async (
-  book
-
+  book,
+  setSlot
 ) => {
   try {
-  console.log("123hei",book)
-   await Axios.post("/appointment/book", book);
 
+  const res =  await Axios.post("/appointment/book", book);
+
+   setSlot(res.data.filter(time =>time.aval=== false&&time.user==null));
   } catch (error) {
     const errorMsg = catchErrors(error);
     setError(errorMsg);
@@ -67,7 +68,7 @@ export const editBook = async (
 
 ) => {
   try {
-  console.log("123hei",book)
+  
    await Axios.post("/appointment/admin", book);
 
   } catch (error) {
@@ -80,7 +81,7 @@ export const editProduct = async (
 
 ) => {
   try {
-  console.log("hello",products)
+
    await Axios.post("/profile/postsedit", products);
 
   } catch (error) {
@@ -101,7 +102,7 @@ export const deletePost = async (postId, setPosts, setShowToastr) => {
 export const likePost = async (postId, productId,userId, setLikes, like = true) => {
   try {
     if (like) {
-      console.log("mainuser",productId)
+      
       await Axios.post(`/shop/like/${postId}`,{productId});
       setLikes(prev => [...prev, { user: userId }]);
     }

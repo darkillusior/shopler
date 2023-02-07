@@ -14,7 +14,7 @@ function Index({ user }) {
       <main className='p-2 bg-gradient-to-b from-gray-400 to-white' >
         <div className='font-semibold text-2xl font-serif text-white'>Select Category:</div>
 
-        <section className=' p-2 m-2 grid grid-cols-3 justify-evenly'>
+        <section className=' p-2 m-2 min-[375px]:flex flex-wrap sm:grid grid-cols-3 justify-evenly'>
           <Link href={`/shops/general-store`}>
             <a >
               <content className='m-2 border-2 bg-zinc-200 rounded-md border-gray-500  hover:bg-green-200  flex flex-col '>

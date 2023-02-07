@@ -205,7 +205,7 @@ router.post("/",authMiddleware, async (req, res) => {
    user.Appointment.push(obj)
     await user.save();
 
-    return res.status(200).send("done");
+    return res.status(200).json( results.dr[0].persons)
 
  
       } catch (error) {

@@ -48,11 +48,11 @@ setLoading(false)
    
     <tr className=' text-white'>
      <td >{index+1}</td>
-      <td className=' font-semibold flex justify-center  text-lg'> <img className='w-20 rounded-md shadow-md m-2 ' src='/tomatoes.jpg '></img></td>
+      <td className=' font-semibold flex justify-center  text-sm  sm:text-xl'> <img className='w-20  rounded-md shadow-md m-2 ' src={product.images}/></td>
       <td >{product.name}</td>
-      <td ><input name='price'    value={price}  onChange={handleChange}  className=' shadow-md rounded-sm border-slate-200 text-black border-2  p-1' type='number' min={0}></input></td>
-      <td ><input name='discount' value={discount}  onChange={handleChange}  className=' shadow-md rounded-sm border-slate-200 text-black border-2 p-1' type='number' min={0}></input></td>
-      <td ><input  name='stock'   value={stock}  onChange={handleChange}  className='shadow-md rounded-sm border-slate-200 text-black border-2 p-1' type='number' min={0}></input></td>
+      <td ><input name='price'    value={price}  onChange={handleChange}  className=' shadow-md rounded-sm w-8 sm:w-auto border-slate-200 text-black border-2  p-1' type='text' min={""}></input></td>
+      <td ><input name='discount' value={discount}  onChange={handleChange}  className=' shadow-md rounded-sm w-8 sm:w-auto border-slate-200 text-black border-2 p-1' type='text' min={""}></input></td>
+      <td ><input  name='stock'   value={stock}  onChange={handleChange}  className='shadow-md rounded-sm w-8 sm:w-auto border-slate-200 text-black border-2 p-1' type='text' min={""}></input></td>
       <td >
       <Button className=" "
     onClick={handelsubmit}
