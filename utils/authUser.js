@@ -6,7 +6,7 @@ import cookie from "js-cookie";
 export const registerUser = async (user, setError, setFormLoading) => {
   try {
     const res = await axios.post(`${baseUrl}/api/signup`, { user});
-
+    console.log(res.data)
     setToken(res.data);
   } catch (error) {
     setError(catchErrors(error));
@@ -37,7 +37,7 @@ export const redirectUser = (ctx, location) => {
 
 const setToken = token => {
   cookie.set("token", token);
-  window.location.href = "https://shopler.cyclic.app/";
+  window.location.href = "/signup";
 };
 
 export const logoutUser = email => {
