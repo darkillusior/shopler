@@ -14,7 +14,7 @@ router.get("/", authMiddleware, async (req, res) => {
       return res.status(404).send("User not found");
     }
 
-  console.log({user})
+
     return res.status(200).json({ user });
   } catch (error) {
     console.error(error);
@@ -47,6 +47,7 @@ router.post("/", async (req, res) => {
     const payload = { userId: user._id };
     jwt.sign(payload, process.env.JwtSecret, { expiresIn: "2d" }, (err, token) => {
       if (err) throw err;
+      console.log(token)
       res.json(token);
     });
   } catch (error) {
