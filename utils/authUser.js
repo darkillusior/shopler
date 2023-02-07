@@ -37,7 +37,7 @@ export const redirectUser = (ctx, location) => {
 
 const setToken = token => {
   cookie.set("token", token);
-  window.location.href = "/signup";
+  window.location.href = "/";
 };
 
 export const logoutUser = email => {
