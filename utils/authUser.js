@@ -37,7 +37,7 @@ export const redirectUser = (ctx, location) => {
 
 const setToken = token => {
   cookie.set("token", token);
-  window.location.href = "/";
+  window.location.href = "https://shopler.cyclic.app/";
 };
 
 export const logoutUser = email => {
