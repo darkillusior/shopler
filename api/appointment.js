@@ -175,9 +175,12 @@ router.post("/",authMiddleware, async (req, res) => {
     },}
     );
       
-    const alreadypresent = results.dr[0].persons.filter(time =>time.user=== userId);
+
+const alreadypresent = results.dr[0].persons.filter((time) => time.user !==null&&time.user.toString() ==userId).length>0;
+
+    console.log(alreadypresent)
     if(alreadypresent){
-      return res.status(401).send(`alread booked`);
+      return res.status(401).send(`you alread booked`);
      }
    const product = results.dr[0].persons.filter(time =>time.time2=== book.time);
 

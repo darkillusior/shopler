@@ -189,7 +189,7 @@ function DoctorAdmin({doctor}) {
             type="checkbox"
             id="timeslot"
              name="timeslot"
-            value="10:15"
+            value="12:15"
             
             />
     <label>12:00-12:15pm</label>

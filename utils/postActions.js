@@ -56,7 +56,7 @@ export const submitBook = async (
 
   const res =  await Axios.post("/appointment/book", book);
 
-   setSlot(res.data.filter(time =>time.aval=== false&&time.user==null));
+   setSlot(res.data.filter(time =>time.aval=== true&&time.user==null));
   } catch (error) {
     const errorMsg = catchErrors(error);
     setError(errorMsg);

@@ -6,7 +6,7 @@ import { Button } from "semantic-ui-react";
 function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
  
  
-  let apptime = doctor.product.persons.filter(time =>time.aval=== false&&time.user==null)
+  let apptime = doctor.product.persons.filter(time =>time.aval=== true&&time.user==null)
   const [slot , setSlot] = useState(apptime,[]); 
 
   const [time, setTime] = useState();
