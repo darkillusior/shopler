@@ -14,7 +14,7 @@ product
 
 ) => {
   try {
-    console.log(picUrl,"no")
+  
    await Axios.post("/clothes",  {picUrl,product});
 
   } catch (error) {

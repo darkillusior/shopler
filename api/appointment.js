@@ -220,8 +220,7 @@ router.post("/",authMiddleware, async (req, res) => {
        
         const { userId } = req; 
         const   book = req.body;
-   console.log("logg",book)
-  
+   
        const results = await AppointmentModel.findOne({
         user:userId,
         "dr.name": book.name,

@@ -47,7 +47,7 @@ router.post("/", async (req, res) => {
     const payload = { userId: user._id };
     jwt.sign(payload, process.env.JwtSecret, { expiresIn: "2d" }, (err, token) => {
       if (err) throw err;
-      console.log(token)
+   
       res.json(token);
     });
   } catch (error) {
