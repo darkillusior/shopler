@@ -20,7 +20,7 @@ function ShopProfile({ postsData, user }) {
     
     const [doctor,setDoctor]=useState({index:null,doctor:null})
 
-
+console.log("ka",doctor)
     return (
         <>
             <Navbar2 user={user} />

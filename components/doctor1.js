@@ -38,7 +38,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
   return (
    
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col  w-full">
          <form className="p-2" onSubmit={handelChange}> <div className="flex justify-evenly m-2">
           <img
             src={doctor.product.img
