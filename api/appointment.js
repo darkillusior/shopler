@@ -205,7 +205,7 @@ router.post("/",authMiddleware, async (req, res) => {
    user.Appointment.push(obj)
     await user.save();
 
-    return res.status(200).send("done");
+    return res.status(200).json( results.dr[0].persons)
 
  
       } catch (error) {
@@ -220,8 +220,7 @@ router.post("/",authMiddleware, async (req, res) => {
        
         const { userId } = req; 
         const   book = req.body;
-   console.log("logg",book)
-  
+   
        const results = await AppointmentModel.findOne({
         user:userId,
         "dr.name": book.name,

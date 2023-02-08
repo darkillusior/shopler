@@ -30,17 +30,17 @@ function ShopProfile({ postsData, user }) {
                 {data.shop ?
                     <>
                         <div className='m-2 flex item-center'>
-                            <img className='m-2 h-60 w-60 rounded-full border-4 border-double shadow-md  border-blue-800' src={postsData.shop.shopimg} />
+                            <img className='m-2 h-32 w-32 sm:h-60 sm:w-60 rounded-full border-4 border-double shadow-md  border-blue-800' src={postsData.shop.shopimg} />
 
                             <div className='flex flex-col justify-center'>
-                                <h1 className=' p-2 font-bold text-slate-800 text-3xl font-sans'>Name:<a className='px-5 text-2xl font-serif font-semibold'>{postsData.shop.shopname}</a></h1>
-                                <h1 className=' p-2 font-bold text-slate-800 text-3xl font-sans'>Address:<a className='px-5 text-2xl font-serif font-semibold'>{postsData.shop.address}</a></h1>
+                                <h1 className=' p-2 font-bold text-slate-800 text-base sm:text-3xl font-sans'>Name:<a className='px-5 text-base sm:text-xl font-serif font-semibold'>{postsData.shop.shopname}</a></h1>
+                                <h1 className=' p-2 font-bold text-slate-800 text-base sm:text-3xl font-sans'>Address:<a className='px-5 text-base sm:text-xl font-serif font-semibold'>{postsData.shop.address}</a></h1>
                             </div>
                         </div>
 
                         <form ><table className="table-auto m-auto border-slate-200 w-full bg-gray-700 shadow-md">
                             <thead className='border-2 border-slate-200'>
-                                <tr className=' text-slate-200 text-xl  '>
+                                <tr className=' text-slate-200 text-base sm:text-xl  '>
                                     <th >Sno</th>
                                     <th >image</th>
                                     <th>name</th>

@@ -17,11 +17,11 @@ function UserProfile({  user }) {
             </div>
 
             <div className='shadow-md bg-zinc-800 p-2 text-zinc-200'>
-            <h1 className='text-5xl m-2 font-bold text-teal-50 text-center'>Appointments:</h1>
+            <h1 className='text-3xl m-2 font-bold text-teal-50 text-center'>Appointments:</h1>
          
-            <table className="mt-4 mb-4 m-auto rounded-md p-2 w-2/4 bg-gray-700 shadow-md">
+            <table className="mt-4 mb-4 m-auto rounded-md p-2 w-full bg-gray-700 shadow-md">
                <thead className='border-2 rounded-md border-slate-200'>
-                <tr className=' text-yellow-300 text-3xl p-2'>
+                <tr className=' text-yellow-300 text-base  sm:text-3xl p-2'>
                 <th >Sno</th>
                 <th >Hospital</th>
                 <th>Doctor</th>
@@ -29,7 +29,7 @@ function UserProfile({  user }) {
                 </tr>
                 </thead>
                 {products.map((post,index)=>(  <tbody>
-                      <tr className='rounded-md text-slate-100 text-2xl text-center border-slate-200 border-collapse border-2 p-2'>
+                      <tr className='rounded-md text-slate-100 text-sm   sm:text-2xl text-center border-slate-200 border-collapse border-2 p-2'>
                         <td>{index+1}</td>
                         <td>{post.hospitalname}</td>
                         <td>{post.drname}</td>

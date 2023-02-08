@@ -56,7 +56,7 @@ function DoctorAdmin({doctor}) {
 
   return (
     <>
-  <div className="flex flex-col w-full">
+  <div className="flex flex-wrap flex-col w-full">
         <div className="flex justify-evenly m-2">
           <img
             src={doctor.product.img
@@ -68,9 +68,9 @@ function DoctorAdmin({doctor}) {
           </div>
         </div>
         
-  <div className='w-full bg-slate-800 m-2 rounded-md'> 
+  <div className='w-full  bg-slate-800 m-2 rounded-md'> 
   <form >
-  <div className='flex justify-evenly'>
+  <div className='flex flex-wrap justify-evenly'>
    <div className="  m-4 p-4 bg-gray-100 rounded-md  shadow-md ">
      <div className="bg-blue-100 p-2 m-2">
       <input onChange={settimeslot}

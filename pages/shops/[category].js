@@ -18,8 +18,8 @@ function GeneralStore({postsData,dr,category }) {
       <content className='flex flex-col -z-10  p-2 bg-gray-400 '>
    {category==="Doctor"?<>{dr1.map(post => (
         
-        <div className='m-2 border-2  h-56 flex bg-gray-200 shadow-md rounded-md'>
-          <div className='flex'>
+        <div className='m-2 border-2  h-56 flex flex-wrap  bg-gray-200 shadow-md rounded-md'>
+          <div className='flex '>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
               <div className='text-center font-bold text-stone-800'>{post.shopname}</div>
@@ -38,7 +38,7 @@ function GeneralStore({postsData,dr,category }) {
        
                    ))}</>:<> {posts.map(post => (
         
-        <div className='m-2 border-2 h-56 border-[rgb(119,119,119)] flex bg-gray-200 shadow-md rounded-md'>
+        <div className='m-2 border-2  border-[rgb(119,119,119)] flex flex-wrap   bg-gray-200 shadow-md rounded-md'>
           <div className='flex'>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
@@ -52,7 +52,7 @@ function GeneralStore({postsData,dr,category }) {
 
 
           </div>
-          <div className='ml-auto mr-6 w-1/3  overflow-y-auto'>
+          <div className='ml-auto mr-6 h-52  overflow-y-auto'>
            <SearchComponent userId={post.user._id}/>
            <h1 className='text-xl p-1 font-serif font-semibold'>Product list :</h1>
             <br />

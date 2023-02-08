@@ -17,9 +17,9 @@ console.log(postsData)
    
     <main className='bg-gray-200 '>  
     
-    <div className='p-4 flex justify-center items-center ' ><img className='w-1/3   ' src={posts.shopimg}></img></div>
+    <div className='p-4 flex  justify-center items-center ' ><img className='w-1/3   ' src={posts.shopimg}></img></div>
     <hr className='shadow-sm'></hr>
-    <div className='font-semibold text-indigo-900 ml-7 p-2 text-3xl'>{posts.shopname}</div>
+    <div className='font-semibold  text-indigo-900 ml-7 p-2 text-3xl'>{posts.shopname}</div>
    
     <hr className='shadow-sm'></hr>
 
