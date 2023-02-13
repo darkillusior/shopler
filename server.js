@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require('cors')
+
 
 const { createServer } = require("http");
 
@@ -24,21 +24,11 @@ app.use(express.json());
 
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://pink-plain-cockroach.cyclic.app/'
-}));
 
 const PORT = process.env.PORT || 3000;
 
 
 nextApp.prepare().then(() => {
-  app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
-
-  
 
    app.use("/api/signup", require("./api/signup"));
   
