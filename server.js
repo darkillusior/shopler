@@ -14,7 +14,7 @@ const handle = nextApp.getRequestHandler();
 require("dotenv").config({ path: "./config.env" });
 
 const connectDb = require("./utilsServer/connectDb");
-connectDb();
+
 
 app.use(express.json());
 
@@ -41,9 +41,11 @@ nextApp.prepare().then(() => {
 
   app.all("*", (req, res) => handle(req, res));
   
-  httpServer.listen(PORT, err => {
+  connectDb().then(() => {
+    httpServer.listen(PORT, err => {
     
     if (err) throw err;
     console.log(`Express server  running ${PORT}`);
+  });
   });
 });
