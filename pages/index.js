@@ -12,7 +12,7 @@ function Index({ user }) {
     <>
       <Navbar2 user={user} />
       <main className='p-2 bg-gradient-to-b from-gray-200 to-white' >
-        <div className='font-semibold text-2xl font-serif text-white'>Select Category:</div>
+        <div className='font-semibold text-2xl font-serif text-black'>Select Category:</div>
 
         <section className=' p-2 m-2 min-[375px]:flex flex-wrap sm:grid grid-cols-3 justify-evenly'>
           <Link href={`/shops/general-store`}>
