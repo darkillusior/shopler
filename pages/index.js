@@ -11,7 +11,7 @@ function Index({ user }) {
   return (
     <>
       <Navbar2 user={user} />
-      <main className='p-2 bg-gradient-to-b from-gray-400 to-white' >
+      <main className='p-2 bg-gradient-to-b from-gray-200 to-white' >
         <div className='font-semibold text-2xl font-serif text-white'>Select Category:</div>
 
         <section className=' p-2 m-2 min-[375px]:flex flex-wrap sm:grid grid-cols-3 justify-evenly'>

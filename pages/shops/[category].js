@@ -15,7 +15,7 @@ function GeneralStore({postsData,dr,category }) {
   return (
     <>
         <Navbar/>
-      <content className='flex flex-col -z-10  p-2 bg-gray-400 '>
+      <content className='flex flex-col -z-10  p-2 bg-gray-300 '>
    {category==="Doctor"?<>{dr1.map(post => (
         
         <div className='m-2 border-2  h-56 flex flex-wrap  bg-gray-200 shadow-md rounded-md'>

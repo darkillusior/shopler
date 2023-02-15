@@ -5,7 +5,7 @@ import { Icon } from 'semantic-ui-react'
 function Navbar({ user }) {
   const [showProfile, setShowProfile] = useState(false)
   return (
-    <header className='h-14 w-full sticky top-0 bg-gradient-to-b from-cyan-700 to-gray-900   flex item-center font-semibold text-2xl font-sans  shadow-black shadow-md '>
+    <header className='h-14 w-full sticky top-0 bg-gradient-to-b from-cyan-600 to-gray-800   flex item-center font-semibold text-2xl font-sans  shadow-transparent shadow-2xl '>
       <div className='text-sm  sm:text-2xl font-semibold text-zinc-200 font-serif flex items-center m-2'>
         <Link href='/'><a >Shopler.com</a></Link></div>
       <select name="city" className="rounded-md h-10 m-auto font-semibold text-base  sm:text-xl border border-solid border-black">
