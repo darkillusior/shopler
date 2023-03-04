@@ -55,7 +55,7 @@ function Shop() {
      setImg(e.target.files[0]);
     };
 
-  console.log("drinfo",products);
+
 
   const handleSubmit = async (e) => 
    {
