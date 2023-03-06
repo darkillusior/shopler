@@ -21,6 +21,8 @@ router.get("/", authMiddleware, async (req, res) => {
     return res.status(500).send(`Server error`);
   }
 });
+
+
 router.post("/", async (req, res) => {
   const {email, password } = req.body.user;
 

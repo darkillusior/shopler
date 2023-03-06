@@ -31,7 +31,7 @@ function Signup() {
  
   const handleSubmit = async e => {
     e.preventDefault();
-console.log("working")
+    console.log("working")
   
     setFormLoading(true);
 

@@ -15,10 +15,10 @@ function GeneralStore({postsData,dr,category }) {
   return (
     <>
         <Navbar/>
-      <content className='flex flex-col -z-10  p-2 bg-gray-400 '>
+      <content className='flex flex-col  p-2 bg-[#e3e6e6] '>
    {category==="Doctor"?<>{dr1.map(post => (
         
-        <div className='m-2 border-2  h-56 flex flex-wrap  bg-gray-200 shadow-md rounded-md'>
+        <div className='m-2   h-56 flex flex-wrap   shadow-md rounded-md'>
           <div className='flex '>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
@@ -38,26 +38,23 @@ function GeneralStore({postsData,dr,category }) {
        
                    ))}</>:<> {posts.map(post => (
         
-        <div className='m-2 border-2  border-[rgb(119,119,119)] flex flex-wrap   bg-gray-200 shadow-md rounded-md'>
+        <div className='m-2 bg-white w-fit   flex flex-wrap  shadow-md rounded-md'>
           <div className='flex'>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
               <div className='text-center font-bold text-stone-800'>{post.shopname}</div>
             </div>
-         <div className='ml-6 flex flex-col justify-evenly'>
-  <Link href={`/product/${post.user._id}`}><button className='m-2 p-1 shadow-md rounded-md bg-teal-900 hover:bg-teal-800 font-semibold text-zinc-200 text-xs'>Enter Shop</button>
-             </Link><button className='m-2 p-1 shadow-md rounded-md bg-teal-900 hover:bg-teal-800 font-semibold text-zinc-200 text-xs'>Demand Product</button>
+         <div className='ml-4 flex flex-col justify-center'>
+  <Link href={`/product/${post.user._id}`}><button className='m-2 p-2 shadow-md rounded-md bg-teal-900 hover:bg-teal-800 font-semibold text-zinc-200 text-lg'>Enter Shop</button>
+             </Link><button className='m-2 p-2 shadow-md rounded-md bg-teal-900 hover:bg-teal-800 font-semibold text-zinc-200 text-lg'>Demand Product</button>
             </div>
-            
-
-
           </div>
-          <div className='ml-auto mr-6 h-52  overflow-y-auto'>
+         
+          <div className='overflow-y-auto ml-4 p-2'>
            <SearchComponent userId={post.user._id}/>
-           <h1 className='text-xl p-1 font-serif font-semibold'>Product list :</h1>
-            <br />
-            {post.product.map((product,index)=> ( <div className='grid grid-cols-2 px-7 '>
-              <div className='bg-white p-1 w-full border border-solid '><span className='text-lg font-bold '>{index+1}.  </span><a className='text-base font-serif font-semibold '>{product.name}</a></div>
+           <h1 className='text-xl p-1 text-center font-serif font-semibold'>Product list :</h1>
+            {post.product.map((product,index)=> ( <div className='grid grid-cols-2 '>
+              <div className='bg-white p-1 w-full border border-solid '><span className='text-lg font-bold w-full '>{index+1}.  </span><a className='text-base w-full font-serif font-semibold '>{product.name}</a></div>
             
             </div>  ))}
           </div>

@@ -74,7 +74,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
         ))} 
         </div>
         <div className="w-full pt-4 flex justify-center">
-          <Button className="w-1/4" 
+          <Button className="w-1/4 p-2" 
             size='mini'
 
             inverted color='orange'
