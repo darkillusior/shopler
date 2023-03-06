@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require('cors')
+
 
 const { createServer } = require("http");
 
@@ -14,31 +14,21 @@ const handle = nextApp.getRequestHandler();
 require("dotenv").config({ path: "./config.env" });
 
 const connectDb = require("./utilsServer/connectDb");
-connectDb();
-
-app.use(express.json());
-
-
-
-
 
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://pink-plain-cockroach.cyclic.app/'
-}));
+
+
+
+
+
+
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
 
 nextApp.prepare().then(() => {
-  app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
-
-  
 
    app.use("/api/signup", require("./api/signup"));
   
@@ -51,9 +41,11 @@ nextApp.prepare().then(() => {
 
   app.all("*", (req, res) => handle(req, res));
   
-  httpServer.listen(PORT, err => {
+  connectDb().then(() => {
+    httpServer.listen(PORT, err => {
     
     if (err) throw err;
     console.log(`Express server  running ${PORT}`);
+  });
   });
 });

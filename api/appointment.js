@@ -176,6 +176,12 @@ router.post("/",authMiddleware, async (req, res) => {
     );
       
 
+const alreadypresent = results.dr[0].persons.filter((time) => time.user !==null&&time.user.toString() ==userId).length>0;
+
+    console.log(alreadypresent)
+    if(alreadypresent){
+      return res.status(401).send(`you alread booked`);
+     }
    const product = results.dr[0].persons.filter(time =>time.time2=== book.time);
 
   if(product[0].user!=null){
@@ -235,7 +241,9 @@ router.post("/",authMiddleware, async (req, res) => {
       
         
   if(book.aval){
-
+    if(book.Date!==null){ 
+    results.dr[0].Date=book.Date
+    await  results.save()}
     for(let i=0;i<book.time.length;i++){
       
    console.log(book.time )
@@ -247,16 +255,31 @@ router.post("/",authMiddleware, async (req, res) => {
       await  results.save()
        }
       
-      
+       
+       return res.status(200).json( results.dr[0])
 }
 
       if(book.reset){
+        
+           results.dr[0].Date=null 
+          await  results.save()
+       
     for (let j = 0; j <results.dr[0].persons.length; j++) {
 
       results.dr[0].persons[j].user=null
+     
+      await  results.save()
+    }
+    for (let j = 0; j <results.dr[0].persons.length; j++) {
+
+      
       results.dr[0].persons[j].aval=false
       await  results.save()
-    }}
+    }
+
+
+    return res.status(200).json( results.dr[0])
+  }
     
         } catch (error) {
           console.error(error);

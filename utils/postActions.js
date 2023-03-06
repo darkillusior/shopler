@@ -40,7 +40,7 @@ export const submitdr = async (
 
 ) => {
   try {
-  console.log("123hei",products)
+ 
    await Axios.post("/appointment", products);
 
   } catch (error) {
@@ -56,7 +56,7 @@ export const submitBook = async (
 
   const res =  await Axios.post("/appointment/book", book);
 
-   setSlot(res.data.filter(time =>time.aval=== false&&time.user==null));
+   setSlot(res.data.filter(time =>time.aval=== true&&time.user==null));
   } catch (error) {
     const errorMsg = catchErrors(error);
     setError(errorMsg);
@@ -65,12 +65,12 @@ export const submitBook = async (
 
 export const editBook = async (
   book
-
 ) => {
   try {
   
-   await Axios.post("/appointment/admin", book);
-
+    const res =  await Axios.post("/appointment/admin", book);
+  
+     
   } catch (error) {
     const errorMsg = catchErrors(error);
     setError(errorMsg);

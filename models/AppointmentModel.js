@@ -9,7 +9,7 @@ const Appointment = new Schema({
   shopname:{type: String},
  
   dr:[{
-   Date:{type:Date,default:null},
+   Date:{type:String,default:null},
     name:{ type:String},
     fees:{ type:Number},
    specialization:{ type:String},

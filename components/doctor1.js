@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import { submitBook } from "../utils/postActions";
 import { Button } from "semantic-ui-react";
 
@@ -6,16 +6,18 @@ import { Button } from "semantic-ui-react";
 function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
  
  
-  let apptime = doctor.product.persons.filter(time =>time.aval=== false&&time.user==null)
-  const [slot , setSlot] = useState(apptime,[]); 
-
+  let apptime = doctor.product.persons.filter(time =>time.aval=== true&&time.user==null)
+  const [slot , setSlot] = useState(apptime||[]); 
+ useEffect(() => {
+  setSlot(apptime)
+  }, [doctor]);
   const [time, setTime] = useState();
   const [loading, setLoading] = useState(false);
   const ontimechange = (e) => {
     setTime(e.target.value);
 
   };
-  console.log(apptime)
+  console.log("appoin",slot,apptime)
 
   const handelChange = (e) => {
     e.preventDefault();
@@ -34,11 +36,11 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
   }
 
 
-  console.log("fds",doctor);
+  
   return (
    
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col  w-full">
          <form className="p-2" onSubmit={handelChange}> <div className="flex justify-evenly m-2">
           <img
             src={doctor.product.img
@@ -50,11 +52,11 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
           </div>
         </div>
         <div className="m-2 flex flex-wrap w-full ">
-      {slot.map(time=>(
+      {slot.map((time,index)=>(
 
 
             
-            <div className="  m-2 bg-gray-100 rounded-md  shadow-md ">
+            <div key={index} className="  m-2 bg-gray-100 rounded-md  shadow-md ">
               
                <div className="bg-blue-100 p-2">
                   <input
