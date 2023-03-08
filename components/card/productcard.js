@@ -16,32 +16,39 @@ function Productcard({product,posts,index,user}) {
   
   
     return (
-    <content className='p-2 m-2  flex '>
-   <div className='flex flex-wrap bg-gray-300 w-full'>  
-   <img className='w-40 h-40 rounded-md' src={product.images}/>
- 
-    <div className='flex flex-col'>
-      <h1 className='text-lg font-semibold ml-6 '>{product.name}</h1>
-    
-      <h1 className='text-lg text-[rgb(109,109,109)] ml-6'>&#8377;{product.price}</h1>
-      <div className=' text-[rgb(121,121,121)] ml-6 mt-4'> stock:{product.stock}</div>
-    </div>
-    <div className='flex justify-center items-center p-4    '>
-   <p className='px-2 font-semibold font-serif text-3xl '>{ likes.length } </p>
-   <div  className='px-2'>
-   <Icon
-             size='large'
-           
-              name="heart"
-              color={isLiked ?"red":"grey"}
-              style={{ cursor: "pointer" }}
-              onClick={() =>
-                likePost(product._id, posts.user._id,user._id, setLikes, isLiked ? false : true)
-              }
-            /></div>
-        <button className='hover:bg-green-800 shadow-md bg-green-900 text-gray-100 rounded-md p-2 '>Add To Cart</button></div>
-  </div> 
-   </content>
+      <>
+
+
+ <div class="w-full ml-4 max-w-sm  border  rounded-lg shadow bg-gray-800 border-gray-700">
+        <a href="#">
+          <img class="p-8 rounded-t-lg" src={product.images} alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+         <div className='flex justify-between'>
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{product.name}</h5>
+         <div className='flex justify-center items-center'>
+              <Icon
+                size='large'
+                 name="heart"
+                color={isLiked ? "red" : "grey"}
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  likePost(product._id, posts.user._id, user._id, setLikes, isLiked ? false : true)
+                }
+              />
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{likes.length} </span>
+              </div>
+            </div>
+         
+          <div class="flex items-center justify-between mt-5">
+              <span class="text-3xl font-bold text-gray-900 dark:text-white">&#8377;{product.price}</span>
+              <h5 class="text-xl font-semibold tracking-tight  text-green-300">{product.stock}</h5>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none hover:text-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+</>
   )
 }
 

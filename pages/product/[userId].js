@@ -13,27 +13,28 @@ function Shop({postsData,user}) {
 console.log(postsData)
   return (
     <>
-    <Navbar/>
+    <Navbar user={user}/>
    
-    <main className='bg-gray-200 '>  
+    <main className='bg-gray-200 pb-4 '>  
     
-    <div className='p-4 flex  justify-center items-center ' ><img className='w-1/3   ' src={posts.shopimg}></img></div>
-    <hr className='shadow-sm'></hr>
-    <div className='font-semibold  text-indigo-900 ml-7 p-2 text-3xl'>{posts.shopname}</div>
-   
-    <hr className='shadow-sm'></hr>
-
+    <div className='p-4 flex items-center' ><img className='w-1/6 rounded-full  ' src={posts.shopimg}></img>
+    <div className='font-semibold text-center  text-indigo-900 ml-7 p-2 text-3xl'>{posts.shopname}</div>
+   </div>
+   <div className='flex flex-wrap mt-5'>
     {posts.product.map((product,index)=> ( 
       <Productcard  product={product} posts={posts} user={user} index={index}
       key={index}
       />
       ))}
-        <hr className='shadow-sm'></hr>
-
-       
-        <hr className='shadow-sm'></hr>
+     </div>
+        
     
-    </main>    
+    </main> 
+
+
+     
+
+
     </>
   )
 }

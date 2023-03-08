@@ -11,13 +11,8 @@ function Index({ user }) {
   return (
     <>
       <Navbar2 user={user} />
-<<<<<<< HEAD
       <main className='p-2 bg-[#e3e6e6]' >
       
-=======
-      <main className='p-2 bg-gradient-to-b from-gray-200 to-white' >
-        <div className='font-semibold text-2xl font-serif text-black'>Select Category:</div>
->>>>>>> 5ce0bd6f120362cd1b47a804601a1a4a45bb410f
 
         <section className='  m-2 mt-4 min-[375px]:flex flex-wrap sm:flex sm:flex-wrap justify-around '>
       
