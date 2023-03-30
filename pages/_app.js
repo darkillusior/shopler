@@ -29,7 +29,9 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     ctx.pathname === "/user" ||
     ctx.pathname === "/form"|| 
     ctx.pathname==="/shopProfile"||
-    ctx.pathname === "/userProfile"
+    ctx.pathname === "/userProfile"||
+    ctx.pathname==="/aftercart"||
+    ctx.pathname==="/cart"
 
 
   if (!token) {

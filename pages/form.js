@@ -5,7 +5,10 @@ import Product from "../components/Tools/Products";
 import { submitProduct,submitdr } from "../utils/postActions";
 import uploadSinglePic from "../utils/uplodesinglefile";
 import { Button } from "semantic-ui-react";
-function Shop() {
+import  { useRouter } from "next/router";
+function Shop(data) {
+
+ console.log("sadsad",data)
   const [files, setFiles] = useState();
   const [category, setCategory] = useState();
   const [address, setAddress] = useState();
@@ -89,36 +92,36 @@ function Shop() {
     <main className="bg-lime-50">
    
       <div className="flex justify-around">
- 
-    <div className="w-1/2 m-4  border-2 border-slate-800 rounded-sm shadow-sm shadow-black">
-      <h1 className="text-5xl pt-6 pb-6 ml-4  text-gray-600 font-serif font-semibold">Shop details:</h1>  
-      <hr/>    
-      
-      <h1 className="text-xl m-2 ml-7 text-gray-600 font-serif font-semibold">Shop Image</h1>
-      <input className=" ml-7 mb-2" type="file" name="image"onChange={onchange}/>
-      <hr/>   
-      <h1 className="text-xl m-2 ml-7 text-gray-600 font-serif font-semibold">Shop Image</h1>
-      <input className=" ml-7 mb-2" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)} />
-      <hr/>   
-      <h1 className="text-xl m-2  ml-7 text-gray-600 font-serif font-semibold">Category</h1>
-      <select name="category" className="m-2  ml-7 text-lg text-slate-600  border border-solid" onChange={handleChange}>
-        <option value="" selected disabled hidden>Choose here</option>
-        <option value="general-store"  >general-store</option>
-        <option value="Grocery-Store">Grocery-Store</option>
-        <option value="Electronic-Store">Electronic-Store</option>
-        <option value="Books-Store">Books-Store</option>
-        <option value="Stationary-Store">Stationary-Store</option>
-        <option value="Pharmacy-Store">Pharmacy-Store</option>
-        <option value="Doctor">Doctor/Appointment</option>
-      </select>
-      <hr/>    
+          {!data.shop ? <> <div className="w-1/2 m-4  border-2 border-slate-800 rounded-sm shadow-sm shadow-black">
+            <h1 className="text-5xl pt-6 pb-6 ml-4  text-gray-600 font-serif font-semibold">Shop details:</h1>
+            <hr />
 
-        
-      <h1 className="text-xl m-2  ml-7 text-gray-600 w-full font-serif font-semibold">Address</h1>
-      <textarea className='m-2  ml-7 border border-solid ' placeholder='discription' name='discription' value={address} onChange={(e)=>setAddress(e.target.value)}  />  
-      <hr/>
-      
-      </div>
+            <h1 className="text-xl m-2 ml-7 text-gray-600 font-serif font-semibold">Shop Image</h1>
+            <input className=" ml-7 mb-2" type="file" name="image" onChange={onchange} />
+            <hr />
+            <h1 className="text-xl m-2 ml-7 text-gray-600 font-serif font-semibold">Shop Image</h1>
+            <input className=" ml-7 mb-2" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+            <hr />
+            <h1 className="text-xl m-2  ml-7 text-gray-600 font-serif font-semibold">Category</h1>
+            <select name="category" className="m-2  ml-7 text-lg text-slate-600  border border-solid" onChange={handleChange}>
+              <option value="" selected disabled hidden>Choose here</option>
+              <option value="general-store"  >general-store</option>
+              <option value="Grocery-Store">Grocery-Store</option>
+              <option value="Electronic-Store">Electronic-Store</option>
+              <option value="Books-Store">Books-Store</option>
+              <option value="Stationary-Store">Stationary-Store</option>
+              <option value="Pharmacy-Store">Pharmacy-Store</option>
+              <option value="Doctor">Doctor/Appointment</option>
+            </select>
+            <hr />
+
+
+            <h1 className="text-xl m-2  ml-7 text-gray-600 w-full font-serif font-semibold">Address</h1>
+            <textarea className='m-2  ml-7 border border-solid ' placeholder='discription' name='discription' value={address} onChange={(e) => setAddress(e.target.value)} />
+            <hr />
+
+          </div></>:null}
+   
 
       <div className="w-1/2 m-4  border-2 border-slate-800 rounded-sm shadow-sm shadow-black">
       <h1 className="text-5xl pt-6 pb-6 ml-4  text-gray-600 font-serif font-semibold">Product Details:</h1>

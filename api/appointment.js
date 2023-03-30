@@ -246,7 +246,7 @@ const alreadypresent = results.dr[0].persons.filter((time) => time.user !==null&
     await  results.save()}
     for(let i=0;i<book.time.length;i++){
       
-   console.log(book.time )
+ 
      const product = results.dr[0].persons.filter(time =>time.time2=== book.time[i]);
   
      

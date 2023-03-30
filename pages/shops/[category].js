@@ -11,7 +11,7 @@ import SearchComponent from '../../components/layout/Search';
 function GeneralStore({postsData,dr,category,user }) {
   const [posts, setPosts] = useState(postsData||[]);
   const [dr1, setDr] = useState(dr||[]);
-  // console.log(dr)
+  console.log(posts)
   return (
     <>
         <Navbar user={user}/>
@@ -82,13 +82,13 @@ export const getServerSideProps = async ctx => {
    
     const { token } = parseCookies(ctx);
     const {category } = ctx.query;
- 
+    console.log("na2")
     const res = await axios.get(`${baseUrl}/api/shop/${category}`, {
       headers: { Authorization: token },
      
     });
   const {post,user}=res.data
-  console.log("1gg",user)
+console.log("na",post)
     return { props: { postsData: post,dr:user,category :category  } };
   } catch (error) {
     return { props: { errorLoading: true } };

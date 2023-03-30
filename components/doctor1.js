@@ -1,10 +1,20 @@
 import React, { useEffect,useState } from "react";
 import { submitBook } from "../utils/postActions";
-import { Button } from "semantic-ui-react";
 
 
 function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
- 
+  const first_text = " asdasdas asod asdb asd  asd v sa sdf  s s v df g d f daf asdf adsf af df as asf as fs adf a ef af sdsss aaa sdff ea a va sdaw r afsa sfa ";
+
+
+  const [text1, setText1] = useState("");
+
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setText1(first_text.slice(0, text1.length + 1));
+    }, 50);
+    return () => clearTimeout(timeout);
+  }, [text1]);
  
   let apptime = doctor.product.persons.filter(time =>time.aval=== true&&time.user==null)
   const [slot , setSlot] = useState(apptime||[]); 
@@ -39,8 +49,8 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
   
   return (
    
-
-      <div className="flex flex-col  w-full">
+<>
+      {/* <div className="flex flex-col  w-full">
          <form className="p-2" onSubmit={handelChange}> <div className="flex justify-evenly m-2">
           <img
             src={doctor.product.img
@@ -88,9 +98,98 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
           />
           </div>
 </form>
+      </div> */}
+     
+      <div className="w-screen">
+        <div className="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 ">
+          <h1 className=" px-8 pt-2 text-center text-2xl font-bold text-white md:text-4xl">Get Your Appointment:</h1>
+          
+          <div className="flex">
+          <div className="flex w-[35%] flex-col">
+          <img
+            src={doctor.product.img
+            }
+            className="ml-4 shadow-md rounded-full w-60 mt-8 h-60 "
+          ></img>
+         
+          <p className="mt-8 ml-4 pb-2 text-xl text-black font-bold">SELECTED DOCTOR NAME</p>
+          </div> 
+          
+        <div className="text-slate-700 text-xl mt-10 p-4 font-bold">{text1}
+        </div>    
+       
+        </div>
+
+       
+
+        </div>
+
+        <div className="mx-auto grid max-w-screen-lg px-6 pb-20">
+          {/* <div class="">
+            <p class="font-serif text-xl font-bold text-blue-900">Select Doctor</p>
+            <div class="mt-2 grid max-w-3xl gap-x-4 gap-y-3 sm:grid-cols-2 md:grid-cols-3">
+              <div class="relative">
+                <input class="peer hidden" id="radio_1" type="radio" name="radio"  />
+                <span class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-emerald-400"></span>
+                <label class="flex h-full cursor-pointer flex-col rounded-lg p-4   peer-checked:bg-emerald-600 border-2 bg-emerald-100 shadow-lg peer-checked:border-none peer-checked:text-white" for="radio_1">
+                  <span class="mt-2- font-medium ">DOCTOR1</span>
+                 
+                </label>
+              </div>
+              <div class="relative">
+                <input class="peer hidden" id="radio_2" type="radio" name="radio" />
+                <span class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-emerald-400"></span>
+
+                <label class="flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg   peer-checked:bg-emerald-600 border-2 bg-emerald-100  peer-checked:border-none peer-checked:text-white" for="radio_2">
+                  <span class="mt-2 font-medium">DOCTOR2</span>
+                  
+                </label>
+              </div>
+            <div class="relative">
+           <input class="peer hidden" id="radio_3" type="radio" name="radio" />
+           <span class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-emerald-400"></span>
+
+                <label class="flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg  peer-checked:bg-emerald-600 border-2 bg-emerald-100 peer-checked:border-none peer-checked:text-white" htmlFor="radio_3">
+                  <span class="mt-2 font-medium">DOCTOR3</span>
+                 
+                </label>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="m-auto">
+            <p className="font-serif text-xl font-bold text-blue-900 text-center ">Select a date</p>
+            <div className="relative  w-56">
+             
+              <input datepicker="" datepicker-orientation="bottom" autofocus="autofocus" type="date" className="datepicker-input block w-full rounded-lg border border-emerald-300 bg-emerald-50 p-2.5 text-center  text-emerald-800 outline-none ring-opacity-30 placeholder:text-emerald-800 focus:ring focus:ring-emerald-300 sm:text-sm" placeholder="Select date" />
+            </div>
+          </div>
+
+          <div className="m-auto">
+            <p className=" font-serif text-xl font-bold text-blue-900 pt-4">Select a time</p>
+            <div className=" grid grid-cols-4 gap-2 lg:max-w-xl">
+              {slot.map((time, index) => (
+                <>
+                  <div className="bg-blue-100 p-2 grid grid-cols-4">
+                    <input
+                    className=""
+                      type="radio"
+                      id="timeslot"
+                      name="timeslot"
+                      value={time.time2}
+                      onChange={ontimechange}
+                    />
+                    <label className="w-32">{time.time1}-{time.time2}</label>
+                  </div>
+              </>
+              ))}
+            </div>
+          </div>
+
+          <button className="m-auto mt-8 w-56 rounded-full border-8 border-emerald-500 bg-emerald-600 px-10 py-4 text-lg font-bold text-white transition hover:translate-y-1">Book Now</button>
+        </div>
       </div>
-
-
+</>
 
   );
 }

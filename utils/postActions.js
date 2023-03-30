@@ -8,20 +8,7 @@ export const Axios = axios.create({
   headers: { Authorization: cookie.get("token") }
 });
 
-export const submitNewPost = async (
-  picUrl,
-product
 
-) => {
-  try {
-  
-   await Axios.post("/clothes",  {picUrl,product});
-
-  } catch (error) {
-    const errorMsg = catchErrors(error);
-    setError(errorMsg);
-  }
-};
 
 export const submitProduct = async (
   products
@@ -116,49 +103,18 @@ export const likePost = async (postId, productId,userId, setLikes, like = true) 
   }
 };
 
-export const postComment = async (postId, user, text, setComments, setText) => {
+
+
+export const cartMaiDaalo = async (
+postId
+) => {
   try {
-    const res = await Axios.post(`/comment/${postId}`, { text});
 
-    const newComment = {
-      _id: res.data,
-      user,
-      text,
-    
-      date: Date.now()
-    };
+  const res =  await Axios.post(`/addtocart/${postId}`);
 
-    setComments(prev => [newComment, ...prev]);
-    setText("");
+  
   } catch (error) {
-    alert(catchErrors(error));
-  }
-};
-
-export const deleteComment = async (postId, commentId, setComments) => {
-  try {
-    await Axios.delete(`/${postId}/${commentId}`);
-    setComments(prev => prev.filter(comment => comment._id !== commentId));
-  } catch (error) {
-    alert(catchErrors(error));
-  }
-};
-
-export const postSubPost = async (postId, user, text,  setSubPosts, setText,picUrl) => {
-  try {
-    const res = await Axios.post(`/subpost/${postId}`, { text,picUrl });
-
-    const newSubPost = {
-      _id: res.data,
-      user,
-      text,
-      picUrl,
-      date: Date.now()
-    };
-
-    setSubPosts(prev => [newSubPost, ...prev]);
-    setText("");
-  } catch (error) {
-    alert(catchErrors(error));
+    const errorMsg = catchErrors(error);
+    setError(errorMsg);
   }
 };

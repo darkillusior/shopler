@@ -4,6 +4,7 @@ import { useState } from 'react';
 import baseUrl from "../utils/baseUrl";
 import axios from "axios";
 import { parseCookies } from "nookies";
+import Link from 'next/link';
 
 
 function profile({user,postsData}) {
@@ -27,16 +28,16 @@ function profile({user,postsData}) {
                 <div class="mt-16">
                     <h1 class="font-bold text-center text-3xl text-gray-900">{user.name}</h1>               
                  <div class="my-5 px-6">
-                 {console.log(postsData)} 
-                {!data.shop? <a href="/form" class="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Add Shop </a>: <a href="/shopProfile" class="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Shop Profile </a>}   
+                 {/* {console.log(postsData)}  */}
+                {!data.shop&&!data.dr? 
+                <Link href={`/form/${true}`}
+                    className="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Add Shop
+                 </Link>
+                 :
+                 data.dr||data.shop? <a href="/shopProfile" class="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Shop Profile </a>:null}   
                    
                     </div>
-                    <div class="flex justify-between items-center my-5 px-6">
-                        <a href="" class="text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded transition duration-150 ease-in font-medium text-sm text-center w-full py-3">Facebook</a>
-                        <a href="" class="text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded transition duration-150 ease-in font-medium text-sm text-center w-full py-3">Twitter</a>
-                        <a href="" class="text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded transition duration-150 ease-in font-medium text-sm text-center w-full py-3">Instagram</a>
-                        <a href="" class="text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded transition duration-150 ease-in font-medium text-sm text-center w-full py-3">Email</a>
-                    </div>
+                   
 
                     <div class="w-full">
                         <h3 class="font-medium text-gray-900 text-left px-6">Recent appoitments:</h3>

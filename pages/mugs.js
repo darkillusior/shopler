@@ -35,7 +35,7 @@ let picUrl =[];
   
      
     };
-    console.log(sep)
+ 
      const onchange= async (e)=>{
             
        setFiles(e.target.files)

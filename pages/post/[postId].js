@@ -4,7 +4,7 @@ import ProductSlider from "../../components/Tools/Productslider";
 import baseUrl from "../../utils/baseUrl";
 
 function PostPage({ post, product }) {
-  {console.log("working",post)}
+
   return (
     <>
      

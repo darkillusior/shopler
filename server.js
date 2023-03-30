@@ -38,7 +38,7 @@ nextApp.prepare().then(() => {
   app.use("/api/profile", require("./api/profile"));
   app.use("/api/search", require("./api/search"));
   app.use("/api/appointment", require("./api/appointment"));
-
+  app.use("/api/addtocart",require("./api/addtocart"))
   app.all("*", (req, res) => handle(req, res));
   
   connectDb().then(() => {

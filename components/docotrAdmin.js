@@ -62,28 +62,32 @@ function DoctorAdmin({doctor}) {
 
   return (
     <>
-  <div className="flex flex-wrap flex-col w-full">
-        <div className="flex justify-evenly m-2">
+      <div class="w-screen">
+        <h1 class=" pt-4 text-center  text-2xl font-bold text-slate-800 md:text-4xl">Appointments Management:</h1>
+        <div class="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 text-center">
+        
           <img
-            src={doctors.img
+            src={doctor.product.img
             }
-            className="shadow-md rounded-full w-60 h-60  m-2"
+            className="shadow-md rounded-full w-60 mt-8 h-60 m-auto"
           ></img>
-          <div className="w-2/4 border-2 border-slate-600 shadow-md text-lg font-semibold p-2">
-          {doctors.specialization}
-          </div>
+
+          <p class="mt-8 pb-2 text-lg text-white font-semibold">Doctors Name</p>
+
         </div>
         
   <div className='w-full  bg-slate-800 m-2 rounded-md'> 
   <form >
+    <div className='p-4 flex justify-center'>
     <input
-    className='sm:w-1/3 w-2/3 p-3 rounded-sm  '
+    className='sm:w-1/3 w-2/3 p-3 rounded-sm '
      placeholder='date/day'
-    type="text"
+    type="date"
      name="date"
      value={date}  
      onChange={(e)=>setDate(e.target.value)}
     />
+    </div>
   <div className='flex flex-wrap justify-evenly'>
    <div className="  m-4 p-4 bg-gray-100 rounded-md  shadow-md ">
      <div className="bg-blue-100 p-2 m-2">

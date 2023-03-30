@@ -7,7 +7,7 @@ const authMiddleware = require("../middleware/authMiddleware");
 
 router.get("/:category", authMiddleware,async (req, res) => {
   try {
-   
+   console.log("091",req.params.category)
     let user=null
    let post=null
  if(req.params.category==="Doctor"){
@@ -21,6 +21,7 @@ router.get("/:category", authMiddleware,async (req, res) => {
     }else
       {
        post = await ShopModel.find({category:req.params.category}).populate("user")
+       console.log("12",post)
        if (!post) {
         return res.status(404).send("User not found");
       }
@@ -200,7 +201,7 @@ router.put("/unlike/:postId", authMiddleware, async (req, res) => {
 
     const isLiked =
       product[0].likes.filter(like => like.user.toString() === userId).length == 0;
-      console.log(isLiked)
+   
     if (isLiked) {
       return res.status(401).send("Post not liked before")
     }

@@ -14,16 +14,16 @@ function Index({ user }) {
       <main className='p-2 bg-[#e3e6e6]' >
       
 
-        <section className='  m-2 mt-4 min-[375px]:flex flex-wrap sm:flex sm:flex-wrap justify-around '>
+        <section className='  m-2 mt-4  sm:flex sm:flex-row sm:flex-wrap flex flex-col sm:justify-around '>
       
-          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
-            <Link href={`/shops/Grocery-Store`}>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
+            <Link href={`/shops/general-store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/aata.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/rice.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
@@ -33,57 +33,60 @@ function Index({ user }) {
             
 
          
-          <content className='m-2 mt-4  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
               </a></Link>
           </content>
+
            
            
-          <content className='m-2 mt-4  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
               </a></Link>
           </content>
+
          
-          <content className='m-2 mt-4 bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
               </a></Link>
           </content>
+
          
-          <content className='m-2 mt-4  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
@@ -91,28 +94,14 @@ function Index({ user }) {
           </content>
 
 
-          <content className='m-2 mt-4 bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
               <a >
                 <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
-                  </div>
-                </div>
-                <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
-              </a></Link>
-          </content>
-
-          <content className='m-2 mt-4 bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col w-[25%] '>
-            <Link href={`/shops/Grocery-Store`}>
-              <a >
-                <div className='flex flex-col justify-center w-full p-5'>
-                  <img className='hover:cursor-pointer  p-2 rounded-[100px]' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
-                  <div className='flex  justify-evenly w-full mt-5 '>
-                    <img className='w-28 h-28 rounded-full' src='/demo.jpg' />
-                    <img className='w-28 h-28 rounded-full ' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
@@ -120,7 +109,23 @@ function Index({ user }) {
           </content>
 
 
-          <content onMouseEnter={accordian} onMouseLeave={accordian} className='m-2 mt-5  bg-white  rounded-md shadow-md hover:bg-[#feffea] flex flex-col w-[25%]    justify-center '>
+          <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
+            <Link href={`/shops/Grocery-Store`}>
+              <a >
+                <div className='flex flex-col justify-center w-full p-5'>
+                  <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
+                  <div className='flex  justify-evenly w-full mt-5 '>
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full' src='/demo.jpg' />
+                    <img className='md:w-28 md:h-28 w-20 h-20 rounded-full ' src='/demo.jpg' />
+                  </div>
+                </div>
+                <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
+              </a></Link>
+          </content>
+
+
+
+          <content onMouseEnter={accordian} onMouseLeave={accordian} className='m-2 mt-5  bg-white  rounded-md shadow-md hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full   justify-center '>
             <div className='flex justify-center'  >
               <img className='hover:cursor-pointer  p-2 ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675581238/ydgfcy7hvpyp3xkizodl.jpg'></img>
             </div>

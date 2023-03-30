@@ -8,7 +8,7 @@ import Doctors from '../../components/doctors'
 import Navbar from '../../components/navbar2'
 import Booked from '../../components/booked';
 
-function AdminData({ postsData, appoId }) {
+function AdminData({ postsData, appoId ,user}) {
   // console.log(postsData)
   const [booked, setBooked] = useState(false)
   const [posts, setPosts] = useState(postsData || []);
@@ -17,9 +17,9 @@ function AdminData({ postsData, appoId }) {
 
   return (
     <>
-      <Navbar />
+      <Navbar user={user}/>
       {booked ? <Booked /> : null}
-      <main className='bg-amber-100   flex '>
+      <main className='bg-amber-100   md:flex '>
 
         <Doctors doctor={doctor} posts={posts} setDoctor={setDoctor} />
 

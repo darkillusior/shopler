@@ -39,4 +39,4 @@ const Shop = new Schema({
  }]
 });
 
-module.exports = mongoose.model("Shop ",Shop  );
+module.exports = mongoose.model("Shop",Shop);

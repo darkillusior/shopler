@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
     user = new UserModel({
       name,
       email: email.toLowerCase(),
-     
+     items:[],
       password,
 
     });

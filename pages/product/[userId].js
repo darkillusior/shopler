@@ -10,7 +10,7 @@ import Productcard from '../../components/card/productcard';
 function Shop({postsData,user}) {
   const [showCart, setShowCart] = useState(false)
   const [posts, setPosts] = useState(postsData|| []);
-console.log(postsData)
+
   return (
     <>
     <Navbar user={user}/>
@@ -22,9 +22,11 @@ console.log(postsData)
    </div>
    <div className='flex flex-wrap mt-5'>
     {posts.product.map((product,index)=> ( 
+      <div className='p-2'>
       <Productcard  product={product} posts={posts} user={user} index={index}
       key={index}
       />
+      </div>
       ))}
      </div>
         

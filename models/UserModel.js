@@ -25,7 +25,17 @@ const UserSchema = new Schema(
     appointId:{type: Schema.Types.ObjectId, ref:"Appointment"}
      }],
     
+  items: [
+        {
+          productId: { type: Schema.Types.ObjectId,ref:"Shop" },
+          quantity: { type: Number, required: true }
+        }
+      ]
+
+
+    
   },
+  
   { timestamps: true }
 );
 
