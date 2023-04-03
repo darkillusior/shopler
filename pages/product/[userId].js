@@ -4,7 +4,6 @@ import { useState } from 'react'
 import axios from "axios";
 import baseUrl from "../../utils/baseUrl";
 import { parseCookies } from "nookies";
-import { useSelector } from 'react-redux'
 import Navbar from '../../components/navbar2'
 import Productcard from '../../components/card/productcard';
 function Shop({postsData,user}) {
