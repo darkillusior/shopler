@@ -9,7 +9,7 @@ import Navbar from '../../components/navbar2'
 import Booked from '../../components/booked';
 
 function AdminData({ postsData, appoId ,user}) {
-  // console.log(postsData)
+  
   const [booked, setBooked] = useState(false)
   const [posts, setPosts] = useState(postsData || []);
   const [doctor, setDoctor] = useState({ index: null, doctor: null })

@@ -62,9 +62,9 @@ function DoctorAdmin({doctor}) {
 
   return (
     <>
-      <div class="w-screen">
-        <h1 class=" pt-4 text-center  text-2xl font-bold text-slate-800 md:text-4xl">Appointments Management:</h1>
-        <div class="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 text-center">
+      <div className="w-screen">
+        <h1 className=" pt-4 text-center  text-2xl font-bold text-slate-800 md:text-4xl">Appointments Management:</h1>
+        <div className="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 text-center">
         
           <img
             src={doctor.product.img
@@ -72,7 +72,7 @@ function DoctorAdmin({doctor}) {
             className="shadow-md rounded-full w-60 mt-8 h-60 m-auto"
           ></img>
 
-          <p class="mt-8 pb-2 text-lg text-white font-semibold">Doctors Name</p>
+          <p className="mt-8 pb-2 text-lg text-white font-semibold">{doctor.product.name}</p>
 
         </div>
         

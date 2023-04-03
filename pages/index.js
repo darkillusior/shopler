@@ -5,7 +5,7 @@ function Index({ user }) {
   const [showAccordian, setShowAccordian] = useState(false)
   const accordian = () => {
     setShowAccordian(!showAccordian)
-    console.log(showAccordian)
+  
   }
 
   return (

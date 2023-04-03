@@ -13,6 +13,7 @@ const Appointment = new Schema({
     name:{ type:String},
     fees:{ type:Number},
    specialization:{ type:String},
+   about:{type:String},
     img:{ type:String},
     discount:{ type:String},
   

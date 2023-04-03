@@ -126,7 +126,7 @@ router.post("/",authMiddleware, async (req, res) => {
         
           specialization: unique[i].specialization,
         
-         
+         about: unique[i].about,
           
           fees: unique[i].fees,
         

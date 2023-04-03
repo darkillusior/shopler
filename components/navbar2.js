@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { logoutUser } from "../utils/authUser";
-import Link from "next/link";
-function Navbar({ user }) {
-  const [showProfile, setShowProfile] = useState(false);
+
+function Navbar({ user,length }) {
+
+  
+
+  
+  const [length1 ,setLength] = useState(user.items.length);
+
+  useEffect(() => {
+    setLength(length?length:user.items.length)
+  }, [length])
+  
   return (
 
     <>
@@ -11,11 +20,7 @@ function Navbar({ user }) {
 
           <div className="flex">
           <a href="/" className="flex items-center">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-6 mr-3 sm:h-9"
-              alt="Flowbite Logo"
-            />
+           
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
               Shopler
             </span>
@@ -31,7 +36,7 @@ function Navbar({ user }) {
             className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
             id="language-dropdown-menu"
           >
-            <ul class="py-2" role="none">
+            <ul className="py-2" role="none">
               <li>
                 <a
                   href="#"
@@ -101,8 +106,8 @@ function Navbar({ user }) {
               </a>
             </li>
             <li className=" flex item-center h-10 w-10 cursor-pointer justify-center">           
-              <a href="/cart"> <img classname='' src="/carts.png"></img></a>
-              <h1 className="text-white font-semibold text-center m-auto">1</h1>
+              <a href="/cart"> <img className='' src="/carts.png"></img></a>
+              <h1 className="text-white font-semibold text-center m-auto">{length1}</h1>
             </li>
            
           </div>
@@ -147,3 +152,22 @@ function Navbar({ user }) {
 }
 
 export default Navbar;
+
+// export const getServerSideProps = async ctx => {
+//   try {
+
+//     const { token } = parseCookies(ctx);
+
+
+//     const res = await axios.get(`${baseUrl}/api/addtocart`, {
+//       headers: { Authorization: token },
+
+//     });
+//     console.log("navbar", res.data)
+//     const post = res.data
+
+//     return { props: { postsData: post } };
+//   } catch (error) {
+//     return { props: { errorLoading: true } };
+//   }
+// };

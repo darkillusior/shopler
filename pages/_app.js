@@ -4,10 +4,12 @@ import baseUrl from "../utils/baseUrl";
 import { redirectUser } from "../utils/authUser";
 import "semantic-ui-css/semantic.min.css";
 import '../styles/globals.css'
-
+import { Provider } from 'react-redux'
+import store from '../store/store.js'
 function MyApp({ Component, pageProps }) {
-  return (
+  return (<Provider store={store}>
         <Component {...pageProps} />
+          </Provider >
   );
 }
 
@@ -30,7 +32,7 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     ctx.pathname === "/form"|| 
     ctx.pathname==="/shopProfile"||
     ctx.pathname === "/userProfile"||
-    ctx.pathname==="/aftercart"||
+    ctx.pathname==="/verifyDetails"||
     ctx.pathname==="/cart"
 
 

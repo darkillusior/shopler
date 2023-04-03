@@ -106,12 +106,12 @@ export const likePost = async (postId, productId,userId, setLikes, like = true) 
 
 
 export const cartMaiDaalo = async (
-postId
+postId,name,price,image,setIndex
 ) => {
   try {
 
-  const res =  await Axios.post(`/addtocart/${postId}`);
-
+  const res =  await Axios.post(`/addtocart/${postId}`,{name,price,image});
+ 
   
   } catch (error) {
     const errorMsg = catchErrors(error);

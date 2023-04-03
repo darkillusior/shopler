@@ -5,10 +5,10 @@ import Product from "../components/Tools/Products";
 import { submitProduct,submitdr } from "../utils/postActions";
 import uploadSinglePic from "../utils/uplodesinglefile";
 import { Button } from "semantic-ui-react";
-import  { useRouter } from "next/router";
-function Shop(data) {
+import Link from "next/link";
+function Shop({data,user}) {
 
- console.log("sadsad",data)
+
   const [files, setFiles] = useState();
   const [category, setCategory] = useState();
   const [address, setAddress] = useState();
@@ -23,6 +23,7 @@ function Shop(data) {
    name: "",
    fees: "",
    specialization:"",
+   about:"",
    img:"",
    shopimg:"",
    address:"",
@@ -73,7 +74,8 @@ function Shop(data) {
     doctorinfo.address=address
     doctorinfo.shopname=name
     doctorinfo.category=category
-    doctorinfo.shopimg=img
+    doctorinfo.shopimg=img 
+   
     await submitdr(products,setLoading)
     setLoading(false);
     }else{
@@ -88,11 +90,11 @@ function Shop(data) {
 
   return (
     <>
-    <Navbar2/>
+    <Navbar2 user={user}/>
     <main className="bg-lime-50">
    
       <div className="flex justify-around">
-          {!data.shop ? <> <div className="w-1/2 m-4  border-2 border-slate-800 rounded-sm shadow-sm shadow-black">
+          {data===undefined ? <> <div className="w-1/2 m-4  border-2 border-slate-800 rounded-sm shadow-sm shadow-black">
             <h1 className="text-5xl pt-6 pb-6 ml-4  text-gray-600 font-serif font-semibold">Shop details:</h1>
             <hr />
 
@@ -145,6 +147,7 @@ function Shop(data) {
   </div>
  
   <div className="flex justify-center items-center p-4 ">
+    <Link href='/'>
     <Button className=" mb-4  w-1/3 "
     onClick={handleSubmit}
     circular
@@ -153,7 +156,9 @@ function Shop(data) {
     style={{ backgroundColor: "#1DA1F2", color: "white" }}
     icon="send"
     loading={loading}
-    /></div>
+    />
+    </Link>
+    </div>
 
   </main>
   </>

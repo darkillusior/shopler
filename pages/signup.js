@@ -17,7 +17,7 @@ function Signup() {
   const handleChange = e => {
     const { name, value } = e.target;
 
-    console.log("working22")
+ 
 
     setUser(prev => ({ ...prev, [name]: value }));
 
@@ -31,7 +31,7 @@ function Signup() {
  
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log("working")
+ 
   
     setFormLoading(true);
 

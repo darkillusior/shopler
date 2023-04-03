@@ -28,6 +28,11 @@ const UserSchema = new Schema(
   items: [
         {
           productId: { type: Schema.Types.ObjectId,ref:"Shop" },
+          
+          name:{type:String},
+          image:{type:String},
+          price:{type:Number},
+
           quantity: { type: Number, required: true }
         }
       ]

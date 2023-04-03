@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { loginUser } from "../utils/authUser";
 import Link from "next/link";
@@ -25,7 +25,7 @@ function Login() {
 
   
   const handleSubmit = async e => {
-    console.log("working")
+   
     e.preventDefault();
 
     await loginUser(user, setErrorMsg, setFormLoading);

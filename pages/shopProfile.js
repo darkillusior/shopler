@@ -13,7 +13,7 @@ import DoctorAdmin from "../components/docotrAdmin";
 import Link from "next/link";
 
 function ShopProfile({ postsData, user }) {
-  console.log(postsData);
+  
   const [data, setdata] = useState(postsData || {});
 
   let product;
@@ -22,13 +22,13 @@ function ShopProfile({ postsData, user }) {
 
   const [doctor, setDoctor] = useState({ index: null, doctor: null });
 
-  console.log("ka", doctor);
+ 
   return (
     <>
       <Navbar2 user={user} />
 
       <div className="bg-orange-50  ">
-        {console.log("heafdasd",data.shop)}
+       
         {data.shop ? (
           <>
             <div className="m-2 flex item-center">

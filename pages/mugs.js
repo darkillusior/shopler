@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import axios from "axios";
+
 import { submitNewPost } from "../utils/postActions";
 import uploadPic from '../utils/uploadPicToCloudinary';
 function Mugs() {

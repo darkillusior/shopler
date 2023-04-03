@@ -3,7 +3,7 @@ import { submitBook } from "../utils/postActions";
 
 
 function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
-  const first_text = " asdasdas asod asdb asd  asd v sa sdf  s s v df g d f daf asdf adsf af df as asf as fs adf a ef af sdsss aaa sdff ea a va sdaw r afsa sfa ";
+  const first_text = doctor.product.about
 
 
   const [text1, setText1] = useState("");
@@ -18,16 +18,18 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
  
   let apptime = doctor.product.persons.filter(time =>time.aval=== true&&time.user==null)
   const [slot , setSlot] = useState(apptime||[]); 
- useEffect(() => {
+   
+  useEffect(() => {
   setSlot(apptime)
-  }, [doctor]);
-  const [time, setTime] = useState();
+   }, [doctor]);
+  
+   const [time, setTime] = useState();
   const [loading, setLoading] = useState(false);
   const ontimechange = (e) => {
     setTime(e.target.value);
 
   };
-  console.log("appoin",slot,apptime)
+ 
 
   const handelChange = (e) => {
     e.preventDefault();
@@ -38,11 +40,12 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
       time: time,
       userId: appoId
     }
-
     submitBook(book,setSlot)
     setLoading(false)
     setBooked(true)
-    
+    setTimeout(() => {
+      setBooked(false)
+    }, 3000);
   }
 
 
@@ -102,20 +105,20 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
      
       <div className="w-screen">
         <div className="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 ">
-          <h1 className=" px-8 pt-2 text-center text-2xl font-bold text-white md:text-4xl">Get Your Appointment:</h1>
+          <h1 className="  pt-2 text-center text-2xl font-bold text-white md:text-4xl">Get Your Appointment:</h1>
           
-          <div className="flex">
-          <div className="flex w-[35%] flex-col">
+          <div className="sm:flex sm:flex-row flex-col">
+          <div className="flex w-[35%] flex-col items-center m-auto">
           <img
             src={doctor.product.img
             }
-            className="ml-4 shadow-md rounded-full w-60 mt-8 h-60 "
+            className="sm:ml-4  shadow-md rounded-full w-60 mt-8 h-60 "
           ></img>
          
-          <p className="mt-8 ml-4 pb-2 text-xl text-black font-bold">SELECTED DOCTOR NAME</p>
+          <p className="mt-8 ml-4 pb-2 text-xl text-center text-black font-bold">{doctor.product.name}</p>
           </div> 
           
-        <div className="text-slate-700 text-xl mt-10 p-4 font-bold">{text1}
+        <div className="text-slate-700 sm:text-xl w-1/2 mt-10 p-4 text-center m-auto font-bold text-lg">{text1}
         </div>    
        
         </div>
@@ -123,7 +126,8 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
        
 
         </div>
-
+          
+        <form onSubmit={handelChange}>
         <div className="mx-auto grid max-w-screen-lg px-6 pb-20">
           {/* <div class="">
             <p class="font-serif text-xl font-bold text-blue-900">Select Doctor</p>
@@ -186,9 +190,12 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             </div>
           </div>
 
-          <button className="m-auto mt-8 w-56 rounded-full border-8 border-emerald-500 bg-emerald-600 px-10 py-4 text-lg font-bold text-white transition hover:translate-y-1">Book Now</button>
+          <button type="submit" className="m-auto mt-8 w-56 rounded-full border-8 border-emerald-500 bg-emerald-600 px-10 py-4 text-lg font-bold text-white transition hover:translate-y-1">Book Now</button>
         </div>
+        </form>
+     
       </div>
+    
 </>
 
   );

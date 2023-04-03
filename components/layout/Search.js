@@ -53,8 +53,9 @@ function SearchComponent({userId}) {
   }, [text]);
 
   return (
-    <div className="pt-4">
+    <div className="pt-4 w-full flex justify-center">
     <Search
+    className="m-auto"
       onBlur={() => {
         results.length > 0 && setResults([]);
         loading && setLoading(false);

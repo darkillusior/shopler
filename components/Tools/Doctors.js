@@ -6,6 +6,7 @@ function Doctors({ setDoctorinfo, setFiles, doctorinfo, setMoreproducts, files }
         name,
         fees,
         specialization,
+        about,
         discount,
      
     } = doctorinfo;
@@ -60,9 +61,17 @@ function Doctors({ setDoctorinfo, setFiles, doctorinfo, setMoreproducts, files }
                 </div>
                 <hr />
 
+                
                 <div className=' m-2'>
                     <label className=' text-base  sm:text-xl text-gray-600 font-serif font-semibold'> Specialization:</label><br />
                     <textarea className='w-1/2 p-2 border border-solid h-16' placeholder='specialization' name='specialization' value={specialization} onChange={handleChange} />
+                </div>
+                <hr />
+
+              
+                <div className=' m-2'>
+                    <label className=' text-base  sm:text-xl text-gray-600 font-serif font-semibold'> About:</label><br />
+                    <textarea className='w-1/2 p-2 border border-solid h-16' placeholder='About' name='about' value={about} onChange={handleChange} />
                 </div>
                 <hr />
 

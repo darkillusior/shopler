@@ -30,9 +30,9 @@ function profile({user,postsData}) {
                  <div class="my-5 px-6">
                  {/* {console.log(postsData)}  */}
                 {!data.shop&&!data.dr? 
-                <Link href={`/form/${true}`}
-                    className="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Add Shop
-                 </Link>
+                <a  className="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white" href='/form'
+                   >Add Shop
+                 </a>
                  :
                  data.dr||data.shop? <a href="/shopProfile" class="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white">Shop Profile </a>:null}   
                    
@@ -77,7 +77,7 @@ export const getServerSideProps = async ctx => {
         });
 
 
-        console.log("f", res.data)
+      
 
         return { props: { postsData: res.data } };
     }
