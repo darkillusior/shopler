@@ -58,7 +58,7 @@ router.get("/:postId", async (req, res) => {
     }
 
   }
-console.log(product,"hello")
+
 
     return res.json({varients:colorsizeslug,product:product});
   } catch (error) {

@@ -46,7 +46,7 @@ function PostPage({ post, product }) {
          
           {Object.keys(post[product.color]).map((posts) => (
   
-          <>         {console.log(post[product.color][posts])}
+          <>     
           {post[product.color][posts].stocks>0 &&<>
           
                <a className="p-2 mx-2 border w-28 h-28   ">

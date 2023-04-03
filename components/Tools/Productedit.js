@@ -1,7 +1,7 @@
 import React from 'react'
 import  { useState } from "react";
 import {editProduct } from "../../utils/postActions";
-import { Button } from "semantic-ui-react";
+
 
 function Productedit({product,index}) {
   const[editingmode,seteditingmode]=useState(false)

@@ -7,7 +7,7 @@ const authMiddleware = require("../middleware/authMiddleware");
 
 router.get("/:category", authMiddleware,async (req, res) => {
   try {
-   console.log("091",req.params.category)
+  
     let user=null
    let post=null
  if(req.params.category==="Doctor"){
@@ -21,7 +21,7 @@ router.get("/:category", authMiddleware,async (req, res) => {
     }else
       {
        post = await ShopModel.find({category:req.params.category}).populate("user")
-       console.log("12",post)
+     
        if (!post) {
         return res.status(404).send("User not found");
       }

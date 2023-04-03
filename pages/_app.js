@@ -4,12 +4,11 @@ import baseUrl from "../utils/baseUrl";
 import { redirectUser } from "../utils/authUser";
 import "semantic-ui-css/semantic.min.css";
 import '../styles/globals.css'
-import { Provider } from 'react-redux'
-import store from '../store/store.js'
+
 function MyApp({ Component, pageProps }) {
-  return (<Provider store={store}>
+  return (
         <Component {...pageProps} />
-          </Provider >
+         
   );
 }
 

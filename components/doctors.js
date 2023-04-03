@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Doctor1 from '../components/doctor1'
+
 function Doctors({posts,setDoctor,doctor}) {
 
   

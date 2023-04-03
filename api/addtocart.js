@@ -21,7 +21,7 @@ router.post("/:postId", authMiddleware, async (req, res) => {
   const { postId } = req.params;
   const { userId } = req;
   const {name,image,price}=req.body
-console.log(image)
+
   try {
   const user = await UserModel.findById(userId);
     
