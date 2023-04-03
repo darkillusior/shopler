@@ -18,7 +18,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
  
   let apptime = doctor.product.persons.filter(time =>time.aval=== true&&time.user==null)
   const [slot , setSlot] = useState(apptime||[]); 
-   
+ 
   useEffect(() => {
   setSlot(apptime)
    }, [doctor]);
@@ -174,7 +174,8 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             <div className=" grid grid-cols-4 gap-2 lg:max-w-xl">
               {slot.map((time, index) => (
                 <>
-                  <div className="bg-blue-100 p-2 grid grid-cols-4">
+            
+                  <div key={index} className="bg-blue-100 p-2 grid grid-cols-4">
                     <input
                     className=""
                       type="radio"
