@@ -21,9 +21,9 @@ totalPrice+=post.items[i].price*post.items[i].quantity;
   return (
     <>
     <Navbar2 user={user}/>
-      <div className="flex md:flex-row flex-col h-screen " >
+      <div className="flex md:flex-row flex-col sm:h-screen " >
         <div
-          className="lg:w-2/3 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white  overflow-x-hidden overflow-y-auto"
+          className="lg:w-2/3 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white h-auto  overflow-x-hidden sm:overflow-y-auto"
          
         >
           <p className="text-5xl font-black leading-10 text-gray-800 pt-3">
