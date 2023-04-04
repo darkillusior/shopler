@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { logoutUser } from "../utils/authUser";
 function Navbar({ user,length }) {
-
-  
 const[showcollapse,setshowcollapse]=useState(false)
-
 const changeCollapse=()=>{
   setshowcollapse(!showcollapse)
 }
@@ -57,22 +54,22 @@ const changeCollapse=()=>{
             <a href="/profile"className="hidden sm:block  pl-3 mr-4 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
             </li>
 
-            <div class="sm:hidden flex flex-col items-center pr-5">
-              <button class="navbar-burger flex items-center text-blue-600 p-3" onClick={changeCollapse}>
-                <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="sm:hidden flex flex-col items-center pr-5">
+              <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={changeCollapse}>
+                <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </button>
               
        {showcollapse ?
-                <> <ul><li class="mb-1 sm:hidden">
-                  <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#"> <button
+                <> <ul><li className="mb-1 sm:hidden">
+                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#"> <button
                     onClick={() => logoutUser(user.email)}
                   
                   >Logout</button></a>
                 </li>
-                  <li class="mb-1">
-                    <a href='/profile' class="block sm:hidden p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Profile</a>
+                  <li className="mb-1">
+                    <a href='/profile' className="block sm:hidden p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Profile</a>
                   </li></ul></> : null}</div> 
 
             <li className=" flex item-center h-10 w-10 cursor-pointer justify-center">           
