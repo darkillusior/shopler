@@ -1,11 +1,8 @@
-import Link from 'next/link';
 import React from 'react'
 import { useState } from "react";
-// import { useSelector, useDispatch } from 'react-redux'
 import { cartMaiDaalo } from '../../utils/postActions';
 import {Icon} from "semantic-ui-react";
 import { likePost } from "../../utils/postActions";
-
 function Productcard({product,posts,user,setLength}) {
   
 
@@ -13,7 +10,7 @@ function Productcard({product,posts,user,setLength}) {
 
   const [likes, setLikes] = useState(product.likes);
   const [index1, setIndex] = useState(user.items);
-console.log("ma",index1)
+
   const isLiked =
     likes.length > 0 && likes.filter(like => like.user === user._id).length > 0;
 
@@ -40,7 +37,7 @@ console.log("ma",index1)
       <>
 
 
- <div className="w-full sm:ml-4 m-auto  border  rounded-lg shadow bg-gray-800 border-gray-700">
+ <div className="w-full sm:ml-4 m-auto  border  rounded-lg shadow shadow-md bg-gray-800 border-gray-700">
         <a href="#">
           <img className=" rounded-t-lg w-[18rem] h-[20rem] m-auto p-4" src={product.images} alt="product image" />
         </a>

@@ -229,7 +229,7 @@ function DoctorAdmin({doctor}) {
         type="checkbox"
         id="timeslot"
         name="timeslot"
-        value="1:0"
+        value="13:0"
     />
     <label>12:45-01:00pm</label>   
     {doctors.persons[11].aval==true?<Icon name='check' className='px-4'></Icon>:      <Icon name='close' className='px-4'></Icon>}  

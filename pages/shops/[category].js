@@ -16,13 +16,13 @@ function GeneralStore({postsData,dr,category,user }) {
     <>
         <Navbar user={user}/>
 
-      <content className='sm:flex-row sm:flex sm:flex-wrap flex-col   justify-evenly  p-2 bg-[#e3e6e6] '>
+      <content className='md:flex-row md:flex md:flex-wrap flex-col   justify-evenly  p-2 bg-[#e3e6e6] '>
 
   
 
    {category==="Doctor"?<>{dr1.map(post => (
         
-        <div className='m-2 sm:w-[45%]  h-56 flex flex-wrap  w-full shadow-md rounded-md bg-white'>
+        <div className='m-2 md:w-[45%]  h-56 flex flex-wrap  w-full shadow-md rounded-md bg-white'>
           <div className='flex '>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
@@ -42,7 +42,7 @@ function GeneralStore({postsData,dr,category,user }) {
        
                    ))}</>:<> {posts.map(post => (
         
-        <div className='m-2 bg-white sm:w-[45%] w-full  justify-around flex flex-wrap items-center shadow-md rounded-md'>
+        <div className='m-2 bg-white md:w-[45%] w-full  justify-around flex flex-wrap items-center shadow-md rounded-md'>
           <div className='flex justify-around items-center '>
             <div className='flex flex-col'>
             <div className='ml-6 mt-1 flex flex-col items-center justify-center'>
@@ -57,10 +57,11 @@ function GeneralStore({postsData,dr,category,user }) {
                          <div className='overflow-y-auto ml-4 p-2 w-[50%] overflow-x-hidden'>
                            <SearchComponent userId={post.user._id} />
                            <h1 className='text-xl p-1 text-center font-serif font-semibold'>Product list :</h1>
-                           <div className='sm:grid sm:grid-cols-2 w-[100%] h-full overflow-y-auto '>
+                           <div className='md:grid md:grid-cols-2 w-[100%] h-full overflow-y-auto '>
                              {post.product.map((product, index) => (
 
-                               <div className='bg-white p-1 w-full border border-solid '><span className='text-lg font-bold w-full '>{index + 1}.  </span><a className='text-base w-full font-serif font-semibold '>{product.name}</a></div>
+                             <div className='bg-white p-1 w-full border border-solid '>
+                              <a className='text-base w-full font-serif font-semibold '>{product.name}</a></div>
 
                              ))}
                            </div>

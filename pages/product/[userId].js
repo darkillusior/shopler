@@ -18,13 +18,14 @@ function Shop({postsData,user}) {
     <>
     <Navbar user={user} length={length}/>
    
-    <main className='bg-gray-200 pb-4 '>  
+      <main className='pb-4 '>  
     
-        <div className='p-4  sm:flex-row flex flex-col items-center bg-emerald-400/60' >
-        <img className='sm:w-1/3 w-2/4 rounded-full  ' src={posts.shopimg}></img>
-        <div className='sm:font-semibold text-center  text-indigo-900 ml-7 p-2 sm:text-7xl text-5xl font-bold sm:font-sans font-sans'>{posts.shopname}</div>
+        <div className='p-4 shadow-md sm:flex-row flex flex-col items-center bg-cover
+         'style={{backgroundImage:"url('/bg.jpg')"}}>
+        <img className='sm:w-1/3 w-2/4 rounded-full shadow-md ' src={posts.shopimg}></img>
+        <div className='sm:font-semibold text-center  text-indigo-900 ml-7 p-2 sm:text-7xl text-5xl font-bold sm:font-sans font-sans '>{posts.shopname}</div>
    </div>
-   <div className='sm:flex-wrap sm:flex-row flex flex-col items-center bg-amber-50'>
+        <div className='sm:flex-wrap sm:flex-row flex flex-col items-center bg-cover' style={{ backgroundImage: "url('/bg2.jpg')" }}>
     {posts.product.map((product,index)=> ( 
       <div className='p-2 mt-4 w-full sm:w-auto sm:p-2'>
       <Productcard  setLength={setLength} product={product} posts={posts} user={user} index={index}
