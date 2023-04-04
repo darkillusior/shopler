@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { logoutUser } from "../utils/authUser";
-import Link from "next/link";
 function Navbar({ user,length }) {
 
   
