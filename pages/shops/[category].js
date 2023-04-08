@@ -8,13 +8,13 @@ import baseUrl from "../../utils/baseUrl";
 import { parseCookies } from "nookies";
 import Link from 'next/link';
 import SearchComponent from '../../components/layout/Search';
-function GeneralStore({postsData,dr,category,user }) {
+function GeneralStore({postsData,dr,category,user,user1 }) {
   const [posts, setPosts] = useState(postsData||[]);
   const [dr1, setDr] = useState(dr||[]);
 
   return (
     <>
-        <Navbar user={user}/>
+        <Navbar user={user1}/>
 
       <content className='md:flex-row md:flex md:flex-wrap flex-col   justify-evenly  p-2 bg-[#e3e6e6] '>
 

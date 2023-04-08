@@ -16,7 +16,7 @@ function profile({user,postsData}) {
     return (
     <>
      <div class="bg-gray-300 pb-2 ">
-    <Navbar user={user} />
+    {/* <Navbar user={user} /> */}
   
     <div class=" mx-auto my-32  ">
         <div>

@@ -12,7 +12,7 @@ import Productedit from "../components/Tools/Productedit";
 import DoctorAdmin from "../components/docotrAdmin";
 import Link from "next/link";
 
-function ShopProfile({ postsData, user }) {
+function ShopProfile({ postsData, user,user1 }) {
   
   const [data, setdata] = useState(postsData || {});
 
@@ -25,7 +25,7 @@ function ShopProfile({ postsData, user }) {
  
   return (
     <>
-      <Navbar2 user={user} />
+      <Navbar2 user={user1} />
 
       <div className="bg-orange-50  ">
        

@@ -41,21 +41,26 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   }
   //
   else {
+    const getFollowingData =
+    ctx.pathname === "/dr/[userId]" || ctx.pathname === "/profile"|| ctx.pathname === "/userProfile"
+    || ctx.pathname === "/shopProfile"  || ctx.pathname === "/product/[userId]" || ctx.pathname === "/cart";
+
     try {
     
 
       const res = await axios.get(`${baseUrl}/api/auth`, {
         headers: { Authorization: token },
-     
+        params: { getFollowingData }
       });
 
-      const { user } = res.data;
-
-      if (user) !protectedRoutes && redirectUser(ctx, "/");
-
-      pageProps.user = user;
+      const { user,user1 } = res.data;
+console.log(user,user1)
+      if (user||user1) !protectedRoutes && redirectUser(ctx, "/");
+                  
+    //  user1? pageProps.user = user1:pageProps.user = user;
       
-   
+    pageProps.user1 = user1
+    pageProps.user = user
      
     } catch (error) {
       destroyCookie(ctx, "token");

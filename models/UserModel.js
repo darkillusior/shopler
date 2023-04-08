@@ -11,9 +11,10 @@ const UserSchema = new Schema(
 
     name: { type: String, required: true },
   
-     category:{type:String,default:"User"},
+    category:{type:String,default:"User"},
 
     points:{   type:Number, default:0 },
+    
     userimg:{type: String},
    
     

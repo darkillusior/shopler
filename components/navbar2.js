@@ -6,10 +6,10 @@ const changeCollapse=()=>{
   setshowcollapse(!showcollapse)
 }
   
-  const [length1 ,setLength] = useState(user.items.length);
+  const [length1 ,setLength] = useState(user.items);
 
   useEffect(() => {
-    setLength(length?length:user.items.length)
+    setLength(length?length:user.items)
   }, [length])
   
   return (
