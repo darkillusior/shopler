@@ -44,7 +44,7 @@ router.get("/main/:userId", authMiddleware,async (req, res) => {
     try {
    
       const post = await ShopModel.findOne({user:req.params.userId})
-        
+        .populate("user")
      
        
       if (!post) {

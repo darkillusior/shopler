@@ -37,7 +37,7 @@ function Productcard({product,posts,user,setLength}) {
       <>
 
 
- <div className="w-full sm:ml-4 m-auto  border  rounded-lg shadow shadow-md bg-gray-800 border-gray-700">
+ <div className="w-full sm:ml-4 m-auto  border  rounded-lg shadow-md bg-gray-800 border-gray-700">
         <a href="#">
           <img className=" rounded-t-lg w-[18rem] h-[20rem] m-auto p-4" src={product.images} alt="product image" />
         </a>
