@@ -6,7 +6,7 @@ import { submitProduct,submitdr } from "../utils/postActions";
 import uploadSinglePic from "../utils/uplodesinglefile";
 import { Button } from "semantic-ui-react";
 import Link from "next/link";
-function Shop({data,user}) {
+function Shop({data,user1}) {
 
 
   const [files, setFiles] = useState();
@@ -52,7 +52,7 @@ function Shop({data,user}) {
      setCategory(e.target.value);
     };
   
-    console.log(category);
+  
 
    const onchange = async (e) => 
     {
@@ -66,11 +66,11 @@ function Shop({data,user}) {
     e.preventDefault();
     setLoading(true);
     let img;
-    console.log("lolgg0")
+ 
     img = await uploadSinglePic(image);
-    console.log("lolgg1")
+   
    if (category=="Doctor"){
-    console.log("lolgg2")
+  
     doctorinfo.address=address
     doctorinfo.shopname=name
     doctorinfo.category=category
@@ -90,7 +90,7 @@ function Shop({data,user}) {
 
   return (
     <>
-    <Navbar2 user={user}/>
+    <Navbar2 user={user1}/>
     <main className="bg-lime-50">
    
       <div className="flex justify-around">

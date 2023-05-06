@@ -3,11 +3,11 @@ import { useState } from "react";
 
 import Navbar2 from '../components/navbar2'
 
-function UserProfile({  user }) {
+function UserProfile({  user ,user1}) {
   const [products, setMoreproducts] = useState(user.Appointment||[]);
   return (
    <>
-        <Navbar2 user={user} />
+        <Navbar2 user={user1} />
             <div className='h-1/3 w-full bg-orange-50 p-2 flex shadow-md'>
             <img className='m-2 w-60 h-60 border-4 border-indigo-800 border-double  rounded-full' src="\44732.jpg" />               
             <div className='  w-1/2 justify-items-center items-center'>

@@ -120,7 +120,7 @@ for (let i = 0; i <unique.length; i++) {
       
       }
           
-        await user.product.push(newproduct);
+        user.product.push(newproduct);
         
       
       
@@ -167,7 +167,7 @@ router.post("/like/:postId", authMiddleware, async (req, res) => {
       return res.status(401).send("Post already liked");
     }
 
-    await product[0].likes.unshift({ user:userId});
+     product[0].likes.unshift({ user:userId});
     await post.save();
 
     
@@ -208,7 +208,7 @@ router.put("/unlike/:postId", authMiddleware, async (req, res) => {
 
     const index = product[0].likes.map(like => like.user.toString()).indexOf(userId);
 
-    await product[0].likes.splice(index, 1);
+      product[0].likes.splice(index, 1);
 
     await post.save();
 

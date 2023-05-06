@@ -6,17 +6,17 @@ import baseUrl from "../../utils/baseUrl";
 import { parseCookies } from "nookies";
 import Navbar from '../../components/navbar2'
 import Productcard from '../../components/card/productcard';
-function Shop({postsData,user}) {
+function Shop({postsData,user,user1}) {
  
   
 
   
   const [posts, setPosts] = useState(postsData|| []);
-  const [length ,setLength] = useState(user.items.length);
+  const [length ,setLength] = useState(user1.items);
 
   return (
     <>
-    <Navbar user={user} length={length}/>
+    <Navbar user={user1} length={length}/>
    
       <main className='pb-4 '>  
     

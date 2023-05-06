@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar2 from '../components/navbar2'
 import Link from 'next/link';
-function Index({ user }) {
+function Index({ user1 }) {
   const [showAccordian, setShowAccordian] = useState(false)
   const accordian = () => {
     setShowAccordian(!showAccordian)
@@ -10,7 +10,7 @@ function Index({ user }) {
 
   return (
     <>
-      <Navbar2 user={user} />
+      <Navbar2 user={user1} />
       <main className='p-2 bg-[#e3e6e6] ' style={{ backgroundImage: "url('/bg3.jpg')" }} >
       
 

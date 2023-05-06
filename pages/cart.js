@@ -5,9 +5,9 @@ import Navbar2 from "../components/navbar2";
 import { parseCookies } from "nookies";
 import Link from "next/link";
 
-function Cart({postsData,user}) {
+function Cart({user,user1}) {
   
-  const [post, setPost] = useState(postsData||[])
+  const [post, setPost] = useState(user||[])
       let totalPrice=0;
 
 for(let i=0;i<post.items.length;i++)
@@ -20,7 +20,7 @@ totalPrice+=post.items[i].price*post.items[i].quantity;
   // console.log("adyi",post)
   return (
     <>
-    <Navbar2 user={user}/>
+    <Navbar2 user={user1}/>
       <div className="flex md:flex-row flex-col sm:h-screen " >
         <div
           className="lg:w-2/3 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white h-auto  overflow-x-hidden sm:overflow-y-auto"
@@ -105,23 +105,3 @@ totalPrice+=post.items[i].price*post.items[i].quantity;
 }
 
 export default Cart;
-export const getServerSideProps = async ctx => {
-  
-  try {
-   
-    const { token } = parseCookies(ctx);
-   
- 
-    const res = await axios.get(`${baseUrl}/api/addtocart`, {
-      headers: { Authorization: token },
-     
-    });
-    // console.log("cart page",res.data)
-  const post=res.data
-
-
-    return { props: { postsData: post } };
-  } catch (error) {
-    return { props: { errorLoading: true } };
-  }
-};
