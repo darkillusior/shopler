@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
-import baseUrl from "../utils/baseUrl";
+
 import Navbar2 from "../components/navbar2";
-import { parseCookies } from "nookies";
+
 import Link from "next/link";
 
 function Cart({user,user1}) {

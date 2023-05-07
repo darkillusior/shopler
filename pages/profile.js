@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../components/navbar2'
+
 import { useState } from 'react';
 import baseUrl from "../utils/baseUrl";
 import axios from "axios";
 import { parseCookies } from "nookies";
-import Link from 'next/link';
+
 
 
 function profile({user,postsData}) {
