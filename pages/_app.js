@@ -3,7 +3,7 @@ import { parseCookies, destroyCookie } from "nookies";
 import baseUrl from "../utils/baseUrl";
 import { redirectUser } from "../utils/authUser";
 import "semantic-ui-css/semantic.min.css";
-import '../styles/globals.css'
+
 
 function MyApp({ Component, pageProps }) {
   return (
