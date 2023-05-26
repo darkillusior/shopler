@@ -18,7 +18,7 @@ function Index({ user1 }) {
       
           <content className='m-2  bg-slate-900   rounded-md shadow-md  hover:bg-slate-800 flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/general-store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:h-[340px] md:w-[350px] ' src='general.png'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -27,7 +27,7 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-white font-semibold text-xl'>General Store</div>
-              </a></Link>
+             </Link>
               </content>
              
             
@@ -35,7 +35,7 @@ function Index({ user1 }) {
          
           <content className='m-2  bg-slate-900  rounded-md shadow-md  hover:bg-slate-800 flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:h-[340px] md:w-[350px] ' src='/grocery.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -44,14 +44,14 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-white font-semibold text-xl'>Grocery Store Store</div>
-              </a></Link>
+             </Link>
           </content>
 
            
            
           <content className='m-2  bg-slate-900  rounded-md shadow-md  hover:bg-slate-800 flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:h-[340px] md:w-[350px] ' src='stationary.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -60,13 +60,13 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-white font-semibold text-xl'>Stationary Store</div>
-              </a></Link>
+             </Link>
           </content>
 
          
           {/* <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -75,13 +75,13 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-white font-semibold text-xl'>General Store</div>
-              </a></Link>
+             </Link>
           </content>
 
          
           <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -90,13 +90,13 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
-              </a></Link>
+             </Link>
           </content>
 
 
           <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -105,13 +105,13 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
-              </a></Link>
+             </Link>
           </content>
 
 
           <content className='m-2  bg-white  rounded-md shadow-md  hover:bg-[#feffea] flex flex-col sm:w-[25%] w-full'>
             <Link href={`/shops/Grocery-Store`}>
-              <a >
+            
                 <div className='flex flex-col justify-center w-full p-5'>
                   <img className='hover:cursor-pointer  p-2 rounded-[100px] md:w-[350px] ' src='https://res.cloudinary.com/darkillisour/image/upload/v1675695099/general-store_bkhln6.jpg'></img>
                   <div className='flex  justify-evenly w-full mt-5 '>
@@ -120,7 +120,7 @@ function Index({ user1 }) {
                   </div>
                 </div>
                 <div className='mb-2 text-center text-black font-semibold text-xl'>General Store</div>
-              </a></Link>
+             </Link>
           </content>
  */}
 
@@ -130,8 +130,8 @@ function Index({ user1 }) {
 
 
               <div className=''>
-                <Link href={`/shops/Doctor`}><a > <div className='rounded-sm hover:shadow-md hover:border-2 hover:cursor-pointer hover:bg-lime-200  hover:border-green-800 h-14 flex items-center justify-center text-slate-700  text-center font-normal text-base'>  Doctor Appointment</div>
-                </a></Link><hr />
+                <Link href={`/shops/Doctor`}> <div className='rounded-sm hover:shadow-md hover:border-2 hover:cursor-pointer hover:bg-lime-200  hover:border-green-800 h-14 flex items-center justify-center text-slate-700  text-center font-normal text-base'>  Doctor Appointment</div>
+               </Link><hr />
                 <div className='rounded-sm hover:shadow-md hover:bg-lime-200  hover:border-2 text-slate-700 hover:cursor-pointer hover:border-green-800 h-14 flex items-center justify-center text-center font-normal text-base'><a href='/bookings'>Auto Bookings</a></div>
               </div>
             </div>

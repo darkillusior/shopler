@@ -15,9 +15,9 @@ function Hoodies({  postsData}) {
             
             <div className="flex flex-col p-3 ">
              {console.log(postsData[post]._id)}
-<Link href={`/post/${postsData[post]._id}`}>
-         <a className=" p-4 bg-slate-400"
-         >hello</a> 
+<Link className=" p-4 bg-slate-400" href={`/post/${postsData[post]._id}`}>
+        
+         hello
         </Link>
             </div>
             ))}
