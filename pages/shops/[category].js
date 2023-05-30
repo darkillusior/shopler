@@ -50,8 +50,8 @@ function GeneralStore({postsData,dr,category,user,user1 }) {
               <div className='text-center text-xl font-bold text-stone-800'>{post.shopname}</div>
             </div>
          <div className='ml-4 flex   justify-center'>
-  <Link href={`/product/${post.user._id}`}><button className='m-2 p-1 shadow-md rounded-md bg-teal-900 hover:bg-teal-800  text-zinc-200 text-sm'>Enter Shop</button>
-             </Link><button className='m-2 p-1 shadow-md rounded-md bg-teal-900 hover:bg-teal-800  text-zinc-200 text-sm'>Demand Product</button>
+  <Link href={`/product/${post.user._id}`}><button className='m-2 p-1 font-medium shadow-md rounded-lg bg-teal-500 hover:bg-teal-600 py-2 px-3 text-slate-200 text-sm'>Enter Shop</button>
+             </Link><button className='m-2 p-1 font-medium shadow-md rounded-lg bg-teal-500 hover:bg-teal-600  py-2 px-3 text-slate-200 text-sm'>Demand Product</button>
             </div>
             </div>
                          <div className='overflow-y-auto ml-4 p-2 w-[50%] overflow-x-hidden'>

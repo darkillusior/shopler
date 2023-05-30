@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { logoutUser } from "../utils/authUser";
+import Link from "next/link";
 function Navbar({ user,length }) {
 const[showcollapse,setshowcollapse]=useState(false)
 const changeCollapse=()=>{
@@ -19,12 +20,12 @@ const changeCollapse=()=>{
         <div className="container flex flex-wrap items-center justify-between mx-auto relative">
 
           <div className="flex ">
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
            
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
               Shopler
             </span>
-          </a>
+          </Link>
           <button
             type="button"
             data-dropdown-toggle="language-dropdown-menu"
@@ -69,11 +70,11 @@ const changeCollapse=()=>{
                   >Logout</button></a>
                 </li>
                   <li className="mb-1">
-                    <a href='/profile' className="block sm:hidden p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Profile</a>
+                    <Link href='/profile' className="block sm:hidden p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Profile</Link>
                   </li></ul></> : null}</div> 
 
             <li className=" flex item-center h-10 w-10 cursor-pointer justify-center">           
-            <a href="/cart"> <img className='' src="/carts.png"></img></a>
+            <Link href="/cart"> <img className='' src="/carts.png"></img></Link>
             <h1 className="text-white font-semibold text-center m-auto">{length1}</h1>
             </li>
            
@@ -84,13 +85,13 @@ const changeCollapse=()=>{
           >
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a
