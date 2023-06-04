@@ -19,7 +19,7 @@ function AdminData({ postsData, appoId ,user,user1}) {
     <>
       <Navbar user={user1}/>
       {booked ? <Booked /> : null}
-      <main className='bg-amber-100   md:flex '>
+      <main className='bg-gray-200  md:flex '>
 
         <Doctors doctor={doctor} posts={posts} setDoctor={setDoctor} />
 

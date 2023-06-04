@@ -104,11 +104,11 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
       </div> */}
      
       <div className="w-full  md:ml-48 ">
-        <div className="relative mx-auto mt-20 mb-20 w-1/2 overflow-hidden rounded-t-xl bg-teal-400/60 ">
-          <h1 className="  pt-2 text-center text-2xl font-bold text-white md:text-4xl">Get Your Appointment:</h1>
+        <div className="relative mx-auto mt-20 mb-20 w-4/5 overflow-hidden rounded-t-xl ">
+          <h1 className="  pt-2 text-center text-2xl font-bold text-black md:text-4xl">Get Your Appointment:</h1>
           
           <div className="md:flex md:flex-row flex-col">
-          <div className="flex w-[35%] flex-col items-center m-auto">
+          <div className="flex flex-col items-center m-auto">
           <img
             src={doctor.product.img
             }
@@ -118,7 +118,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
           <p className="mt-8 ml-4 pb-2 text-xl text-center text-black font-bold">{doctor.product.name}</p>
           </div> 
           
-        <div className="md:text-slate-700 md:text-xl md:w-1/2 md:mt-10 md:p-4 md:text-center md:m-auto md:font-bold text-lg text-slate-700 w-full p-4 text-center m-auto">{text1}
+        <div className="md:text-slate-700 md:text-xl md:w-1/2 md:mt-10 md:p-4 md:text-center md:m-auto md:font-bold text-lg text-slate-700 w-full p-4 text-center m-auto">{doctor.product.about}
         </div>    
        
         </div>
@@ -165,7 +165,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             <p className="font-serif text-xl font-bold text-blue-900 text-center ">Select a date</p>
             <div className="relative  w-56">
              
-              <input datepicker="" datepicker-orientation="bottom" autofocus="autofocus" type="date" className="datepicker-input block w-full rounded-lg border border-emerald-300 bg-emerald-50 p-2.5 text-center  text-emerald-800 outline-none ring-opacity-30 placeholder:text-emerald-800 focus:ring focus:ring-emerald-300 md:text-md" placeholder="Select date" />
+              <input datepicker="" datepicker-orientation="bottom" autofocus="autofocus" type="date" className="datepicker-input block w-full rounded-lg border border-black bg-white p-2.5 text-center  text-emerald-800 outline-none ring-opacity-30 placeholder:text-emerald-800 focus:ring focus:ring-blue md:text-md" placeholder="Select date" />
             </div>
           </div>
 
@@ -191,7 +191,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             </div>
           </div>
 
-          <button type="submit" className="m-auto mt-8 w-56 rounded-full border-8 border-emerald-500 bg-emerald-600 px-10 py-4 text-lg font-bold text-white transition hover:translate-y-1">Book Now</button>
+          <button type="submit" className="m-auto mt-8 w-56 rounded-full border-8 border-blue-300 bg-white px-10 py-4 text-lg font-bold text-blue-500 transition hover:translate-y-1">Book Now</button>
         </div>
         </form>
      
