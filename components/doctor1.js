@@ -60,7 +60,7 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             }
             className="shadow-md rounded-full w-60 h-60  m-2"
           ></img>
-          <div className="w-2/4 border-2 border-slate-600 shadow-md text-base  sm:text-xl font-semibold p-2">
+          <div className="w-2/4 border-2 border-slate-600 shadow-md text-base  md:text-xl font-semibold p-2">
             {doctor.product.specialization}
           </div>
         </div>
@@ -103,22 +103,22 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
 </form>
       </div> */}
      
-      <div className="w-screen">
-        <div className="relative mx-auto mt-20 mb-20 max-w-screen-lg overflow-hidden rounded-t-xl bg-emerald-400/60 ">
+      <div className="w-full  md:ml-48 ">
+        <div className="relative mx-auto mt-20 mb-20 w-1/2 overflow-hidden rounded-t-xl bg-teal-400/60 ">
           <h1 className="  pt-2 text-center text-2xl font-bold text-white md:text-4xl">Get Your Appointment:</h1>
           
-          <div className="sm:flex sm:flex-row flex-col">
+          <div className="md:flex md:flex-row flex-col">
           <div className="flex w-[35%] flex-col items-center m-auto">
           <img
             src={doctor.product.img
             }
-            className="sm:ml-4  shadow-md rounded-full w-60 mt-8 h-60 "
+            className="md:ml-4  shadow-md rounded-full w-60 mt-8 h-60 "
           ></img>
          
           <p className="mt-8 ml-4 pb-2 text-xl text-center text-black font-bold">{doctor.product.name}</p>
           </div> 
           
-        <div className="text-slate-700 sm:text-xl w-1/2 mt-10 p-4 text-center m-auto font-bold text-lg">{text1}
+        <div className="md:text-slate-700 md:text-xl md:w-1/2 md:mt-10 md:p-4 md:text-center md:m-auto md:font-bold text-lg text-slate-700 w-full p-4 text-center m-auto">{text1}
         </div>    
        
         </div>
@@ -128,10 +128,10 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
         </div>
           
         <form onSubmit={handelChange}>
-        <div className="mx-auto grid max-w-screen-lg px-6 pb-20">
+        <div className="mx-auto grid w-3/4 px-6 pb-20">
           {/* <div class="">
             <p class="font-serif text-xl font-bold text-blue-900">Select Doctor</p>
-            <div class="mt-2 grid max-w-3xl gap-x-4 gap-y-3 sm:grid-cols-2 md:grid-cols-3">
+            <div class="mt-2 grid max-w-3xl gap-x-4 gap-y-3 md:grid-cols-2 md:grid-cols-3">
               <div class="relative">
                 <input class="peer hidden" id="radio_1" type="radio" name="radio"  />
                 <span class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-emerald-400"></span>
@@ -165,13 +165,13 @@ function Doctor1({ doctor, appoId, hospitaname, setBooked }) {
             <p className="font-serif text-xl font-bold text-blue-900 text-center ">Select a date</p>
             <div className="relative  w-56">
              
-              <input datepicker="" datepicker-orientation="bottom" autofocus="autofocus" type="date" className="datepicker-input block w-full rounded-lg border border-emerald-300 bg-emerald-50 p-2.5 text-center  text-emerald-800 outline-none ring-opacity-30 placeholder:text-emerald-800 focus:ring focus:ring-emerald-300 sm:text-sm" placeholder="Select date" />
+              <input datepicker="" datepicker-orientation="bottom" autofocus="autofocus" type="date" className="datepicker-input block w-full rounded-lg border border-emerald-300 bg-emerald-50 p-2.5 text-center  text-emerald-800 outline-none ring-opacity-30 placeholder:text-emerald-800 focus:ring focus:ring-emerald-300 md:text-md" placeholder="Select date" />
             </div>
           </div>
 
           <div className="m-auto">
             <p className=" font-serif text-xl font-bold text-blue-900 pt-4">Select a time</p>
-            <div className=" grid grid-cols-4 gap-2 lg:max-w-xl">
+            <div className=" md:grid md:grid-cols-4 md:gap-2 grid grid-cols-3 gap-2 lg:max-w-xl">
               {slot.map((time, index) => (
                 <>
             

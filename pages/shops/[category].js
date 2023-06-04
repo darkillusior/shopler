@@ -16,13 +16,13 @@ function GeneralStore({postsData,dr,category,user,user1 }) {
     <>
         <Navbar user={user1}/>
 
-      <content className='md:flex-row md:flex md:flex-wrap flex-col   justify-evenly  p-2 bg-[#e3e6e6] '>
+  <content  className="md:flex-row md:flex md:flex-wrap flex-col justify-evenly p-2 bg-white " >
 
   
 
    {category==="Doctor"?<>{dr1.map(post => (
         
-        <div className='m-2 md:w-[45%]  h-56 flex flex-wrap  w-full shadow-md rounded-md bg-white'>
+        <div className='m-2 md:w-[45%]  h-56 flex flex-wrap  w-full shadow-md rounded-md bg-slate-300'>
           <div className='flex '>
             <div className='ml-6 mt-1 flex flex-col'>
               <img className='shadow-md w-44 h-44 m-2' src={post.shopimg}></img>
