@@ -33,8 +33,6 @@ function GeneralStore({postsData,dr,category,user,user1 }) {
              </Link>
             </div>
             
-
-
           </div>
         
         </div>
@@ -70,13 +68,8 @@ function GeneralStore({postsData,dr,category,user,user1 }) {
           </div>
          
         
-             
-       
                    ))}</>}  
           
-       
-
-
       </content>
     </>
    
@@ -94,6 +87,7 @@ export const getServerSideProps = async ctx => {
       headers: { Authorization: token },
      
     });
+
   const {post,user}=res.data
 
     return { props: { postsData: post,dr:user,category :category  } };

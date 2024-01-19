@@ -62,7 +62,7 @@ router.post("/",authMiddleware, async (req, res) => {
 
    
    let time1=10
-    let time2=00
+    let time2=0
     let time3=10
    let time4=15
    let strtime1="10:0"
@@ -93,7 +93,7 @@ router.post("/",authMiddleware, async (req, res) => {
    
    }  if( time4==60){
      time3=time3+1
-   time4=00
+     time4=0
    
    }    
    strtime1=time1.toString()+":"+time2.toString()
